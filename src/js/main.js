@@ -1,45 +1,28 @@
-import data from "./data";
+import state from "./globals";
 import referenceTable from "./referenceTable";
 
 console.time();
 
-const GRID_PX = 64;
 
-const state = {
-    blueprintString: "",
-    decodedBlueprint: data["blueprint"],
-    dimensions: {
-        minX: Number.POSITIVE_INFINITY,
-        maxX: Number.NEGATIVE_INFINITY,
-        minY: Number.POSITIVE_INFINITY,
-        maxY: Number.NEGATIVE_INFINITY,
-    },
-    offset: { x: 0, y: 0 },
-    gridSize: { w: 0, h: 0 },
-    entities: [],
-    rails: [],
-    railCovers: [],
-    buildings: [],
-    tiles: {
-        "stone-path": [],
-        "concrete": [],
-        "hazard-concrete-left": [],
-        "hazard-concrete-right": [],
-        "refined-concrete": [],
-        "refined-hazard-concrete-left": [],
-        "refined-hazard-concrete-right": []
-    }
-}
+const isRail = (entity) => [
+    "straight-rail",
+    "curved-rail"
+].includes(entity.name);
 
+const isTile = (entity) => [
+    "stone-path",
+    "concrete",
+    "hazard-concrete-left",
+    "hazard-concrete-right",
+    "refined-concrete",
+    "refined-hazard-concrete-left",
+    "refined-hazard-concrete-right"
+].includes(entity.name);
 
-let D = document,
-    $mainCanvas = D.getElementById("main-canvas"),
-    $tileMask = D.getElementById("tile-mask");
-
-
-const isRail = (entity) => ["straight-rail", "curved-rail"].includes(entity.name);
-
-const isTile = (entity) => ["stone-path", "concrete", "hazard-concrete-left", "hazard-concrete-right", "refined-concrete", "refined-hazard-concrete-left", "refined-hazard-concrete-right"].includes(entity.name);    
+const isHazardConcrete = () => [
+    "hazard-concrete-left",
+    "hazard-concrete-right"
+].includes(tileName);
 
 const getGridCoord = (entity) => {
     let gridSize = getGridSize(entity),
@@ -234,21 +217,43 @@ const normalizeCoordinates = () => {
     });
 }
 
+const getSidesOfTileAt = (tileName, x,y) => {
+    state["tileSides"][tileName].push(...[
+        `${ x + .5 } - ${ y }`,
+        `${ x + 1} - ${ y + .5 }`,
+        `${ x + .5} - ${ y + 1 }`,
+        `${ x } - ${ y + .5 }`
+    ]);
+}
+
+const setTilesConture = () => {
+    Object.keys(state["tileSides"]).forEach((tileName) => {
+        let contureCoords = [...new Set(state["tileSides"][tileName])];
+
+        state["tileSides"][tileName] = [];
+
+        contureCoords.forEach((contureCoord) => {
+            state["tileSides"][tileName].push([...contureCoord.split(" - ")])
+        })
+    })
+}
+
 const distributeTile = (tile) => {
     let tileName = tile.name,
         tilePos = tile.position,
         tileCoords = [tilePos.x, tilePos.y];
 
     state["tiles"][tileName].push(tileCoords);
+    getSidesOfTileAt(tileName, ...tileCoords);
 
-    if(tileName === "concrete") {
-        state["tiles"]["hazard-concrete-left"].push(tileCoords);
-        state["tiles"]["hazard-concrete-right"].push(tileCoords);
+    if(["hazard-concrete-left", "hazard-concrete-right"].includes(tileName)) {
+        state["tiles"]["concrete"].push(tileCoords);
+        getSidesOfTileAt("concrete", ...tileCoords);
     }
 
-    if(tileName === "refined-concrete") {
-        state["tiles"]["refined-hazard-concrete-left"].push(tileCoords);
-        state["tiles"]["refined-hazard-concrete-right"].push(tileCoords);
+    if(["refined-hazard-concrete-left", "refined-hazard-concrete-right"].includes(tileName)) {
+        state["tiles"]["refined-concrete"].push(tileCoords);
+        getSidesOfTileAt("refined-concrete", ...tileCoords);
     }
 }
 
@@ -264,17 +269,8 @@ const distributeEntities = () => {
             sortBuildings();
         }
     });
-}
 
-const drawCanvas = (canvas, w, h) => {
-    let width = w * GRID_PX;
-    let height = h * GRID_PX;
-
-    canvas.width = width;
-    canvas.height = height;
-
-    canvas.style.width = width / 2 + "px";
-    canvas.style.height = height / 2 + "px";
+    setTilesConture();
 }
 
 setEntities();
@@ -283,8 +279,6 @@ setOffset();
 normalizeCoordinates();
 distributeEntities();
 setRailCovers();
-
-drawCanvas($mainCanvas, state.gridSize.w, state.gridSize.h);
 
 console.log(state);
 
