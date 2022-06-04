@@ -4197,6 +4197,15 @@ var referenceTable = {
         "image-size": 64,
     },
 
+    "tile-mask": {
+        "grid-size": 1,
+        "image-size": 96,
+    },
+    "curb": {
+        "grid-size": 1,
+        "image-size": 64,
+    },
+
     "combinator-display-size": [30, 22],
     "circuit-connector-size": [64, 64],
     "beacon-slot-size": [64, 64],
