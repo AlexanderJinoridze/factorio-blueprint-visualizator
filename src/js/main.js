@@ -1,11 +1,31 @@
-import state from "./globals";
+import { state, NUMBER_OF_DIRS } from "./globals";
 import referenceTable from "./referenceTable";
 
 console.time();
 
-const isRail = entity => ["straight-rail", "curved-rail"].includes(entity.name);
+const isRail = entityName =>
+    ["straight-rail", "curved-rail"].includes(entityName);
 
-const isTile = entity =>
+const isInserter = entityName => entityName.includes("inserter");
+
+const isBelt = entityName =>
+    [
+        "transport-belt",
+        "fast-transport-belt",
+        "express-transport-belt",
+    ].includes(entityName);
+
+const isBeltEntity = entityName =>
+    [
+        "underground-belt",
+        "fast-underground-belt",
+        "express-underground-belt",
+        "splitter",
+        "fast-splitter",
+        "express-splitter",
+    ].includes(entityName);
+
+const isTile = entityName =>
     [
         "stone-path",
         "concrete",
@@ -14,10 +34,15 @@ const isTile = entity =>
         "refined-concrete",
         "refined-hazard-concrete-left",
         "refined-hazard-concrete-right",
-    ].includes(entity.name);
+    ].includes(entityName);
 
-const isHazardConcrete = () =>
-    ["hazard-concrete-left", "hazard-concrete-right"].includes(tileName);
+const isHazardConcrete = entityName =>
+    ["hazard-concrete-left", "hazard-concrete-right"].includes(entityName);
+
+const isRefinedHazardConcrete = entityName =>
+    ["refined-hazard-concrete-left", "refined-hazard-concrete-right"].includes(
+        entityName
+    );
 
 const getGridCoord = entity => {
     let gridSize = getGridSize(entity),
@@ -35,20 +60,17 @@ const getGridCoord = entity => {
 const getGridSize = entity => {
     let entityName = entity.name,
         entityRef = referenceTable[entityName],
-        gridSize = entityRef["grid-size"],
+        gridSize = entityRef["grid-size"] || 1,
         result;
 
-    // TODO
-    // Since no "grid-size" is introduced in "rotate-version" anymore
-    // realize the logic of reversing the "grid-size" (when it's) array if
-    // direction values is equal to 2,3,6 or 7
-
-    if (!gridSize) {
-        gridSize = entityRef["rotate-version"][entity.direction]["grid-size"];
-    }
-
     if (Array.isArray(gridSize)) {
-        result = { w: gridSize[0], h: gridSize[1] };
+        let gridArray = [...gridSize];
+
+        if ([2, 3, 6, 7].includes(entity.direction)) {
+            gridArray.reverse();
+        }
+
+        result = { w: gridArray[0], h: gridArray[1] };
     } else {
         result = { w: gridSize, h: gridSize };
     }
@@ -73,10 +95,10 @@ const setGridSize = () => {
                 getGridCoord(entity);
         }
 
-        dimensions.minX = Math.min(dimensions.minX, topLeftX);
-        dimensions.maxX = Math.max(dimensions.maxX, bottomRightX);
-        dimensions.minY = Math.min(dimensions.minY, topLeftY);
-        dimensions.maxY = Math.max(dimensions.maxY, bottomRightY);
+        dimensions.minX = Math.floor(Math.min(dimensions.minX, topLeftX));
+        dimensions.maxX = Math.ceil(Math.max(dimensions.maxX, bottomRightX));
+        dimensions.minY = Math.floor(Math.min(dimensions.minY, topLeftY));
+        dimensions.maxY = Math.ceil(Math.max(dimensions.maxY, bottomRightY));
     }
 
     state.gridSize = {
@@ -115,9 +137,7 @@ const zOrderSort = (a, b) => {
     return aCoordY - bCoordY || aCoordX - bCoordX;
 };
 
-const sortBuildings = () => {
-    return state.buildings.sort(zOrderSort);
-};
+const sortBuildings = () => state.buildings.sort(zOrderSort);
 
 const sortRails = () => {
     let curvedRail = [],
@@ -167,55 +187,56 @@ const setRailCovers = () => {
     state.rails.forEach(rail => {
         let { x, y } = rail.position;
 
-        referenceTable[rail.name]["end-points"][rail.direction].forEach(
-            endPointRef => {
-                let [railCoverX, railCoverY] = endPointRef["rail-cover-coord"],
-                    railCoverGlobalCoordX = x + railCoverX,
-                    railCoverGlobalCoordY = y + railCoverY,
-                    railCoverDirection = endPointRef["rail-cover-direction"],
-                    isEndOfLine = endPointRef["rail-path-vars"].every(
-                        railPathVar => {
-                            let [railPathVarX, railPathVarY] =
-                                    railPathVar.coords,
-                                nextRails = getEntitiesAt(
-                                    x + railPathVarX,
-                                    y + railPathVarY
-                                );
+        referenceTable[rail.name]["dir-versions"][rail.direction][
+            "end-points"
+        ].forEach(endPointRef => {
+            let [railCoverX, railCoverY] =
+                    endPointRef["rail-cover-coord-offset"],
+                railCoverGlobalCoordX = x + railCoverX,
+                railCoverGlobalCoordY = y + railCoverY,
+                railCoverDirection = endPointRef["rail-cover-dir"],
+                isEndOfLine = endPointRef["rail-path-vars"].every(
+                    railPathVar => {
+                        let [railPathVarX, railPathVarY] =
+                                railPathVar["rail-coord-offset"],
+                            nextRails = getEntitiesAt(
+                                x + railPathVarX,
+                                y + railPathVarY
+                            );
 
-                            for (let i = 0; i < nextRails.length; i++) {
-                                let nextRail = nextRails[i];
+                        for (let i = 0; i < nextRails.length; i++) {
+                            let nextRail = nextRails[i];
 
-                                if (
-                                    nextRail.direction ===
-                                        railPathVar["rail-dir"] &&
-                                    nextRail.name === railPathVar["rail-type"]
-                                ) {
-                                    return false;
-                                }
+                            if (
+                                nextRail.direction ===
+                                    railPathVar["rail-dir"] &&
+                                nextRail.name === railPathVar["rail-type"]
+                            ) {
+                                return false;
                             }
-
-                            return true;
                         }
-                    ),
-                    alreadyExists = state.railCovers.some(railCover => {
-                        return (
-                            railCover.position.x === railCoverGlobalCoordX &&
-                            railCover.position.y === railCoverGlobalCoordY &&
-                            railCover.direction === railCoverDirection
-                        );
-                    });
 
-                if (isEndOfLine && !alreadyExists) {
-                    state.railCovers.push({
-                        position: {
-                            x: railCoverGlobalCoordX,
-                            y: railCoverGlobalCoordY,
-                        },
-                        direction: railCoverDirection,
-                    });
-                }
+                        return true;
+                    }
+                ),
+                alreadyExists = state.railCovers.some(railCover => {
+                    return (
+                        railCover.position.x === railCoverGlobalCoordX &&
+                        railCover.position.y === railCoverGlobalCoordY &&
+                        railCover.direction === railCoverDirection
+                    );
+                });
+
+            if (isEndOfLine && !alreadyExists) {
+                state.railCovers.push({
+                    position: {
+                        x: railCoverGlobalCoordX,
+                        y: railCoverGlobalCoordY,
+                    },
+                    direction: railCoverDirection,
+                });
             }
-        );
+        });
     });
 };
 
@@ -225,33 +246,12 @@ const normalizeCoordinates = () => {
     state.entities = entities.map(entity => {
         let entityPos = entity.position;
 
-        entityPos.x = Math.abs(state.offset.x - entityPos.x);
-        entityPos.y = Math.abs(state.offset.y - entityPos.y);
+        entityPos.x =
+            Math.abs(state.offset.x - entityPos.x) + state.canvasOffset.x;
+        entityPos.y =
+            Math.abs(state.offset.y - entityPos.y) + state.canvasOffset.y;
 
         return entity;
-    });
-};
-
-const getSidesOfTileAt = (tileName, x, y) => {
-    state["tileSides"][tileName].push(
-        ...[
-            `${x + 0.5} - ${y}`,
-            `${x + 1} - ${y + 0.5}`,
-            `${x + 0.5} - ${y + 1}`,
-            `${x} - ${y + 0.5}`,
-        ]
-    );
-};
-
-const setTilesConture = () => {
-    Object.keys(state["tileSides"]).forEach(tileName => {
-        let contureCoords = [...new Set(state["tileSides"][tileName])];
-
-        state["tileSides"][tileName] = [];
-
-        contureCoords.forEach(contureCoord => {
-            state["tileSides"][tileName].push([...contureCoord.split(" - ")]);
-        });
     });
 };
 
@@ -261,47 +261,187 @@ const distributeTile = tile => {
         tileCoords = [tilePos.x, tilePos.y];
 
     state["tiles"][tileName].push(tileCoords);
-    getSidesOfTileAt(tileName, ...tileCoords);
 
-    if (["hazard-concrete-left", "hazard-concrete-right"].includes(tileName)) {
+    if (isHazardConcrete(tileName)) {
         state["tiles"]["concrete"].push(tileCoords);
-        getSidesOfTileAt("concrete", ...tileCoords);
     }
 
-    if (
-        [
-            "refined-hazard-concrete-left",
-            "refined-hazard-concrete-right",
-        ].includes(tileName)
-    ) {
+    if (isRefinedHazardConcrete(tileName)) {
         state["tiles"]["refined-concrete"].push(tileCoords);
-        getSidesOfTileAt("refined-concrete", ...tileCoords);
     }
 };
 
 const distributeEntities = () => {
     state.entities.forEach(entity => {
-        if (isRail(entity)) {
+        let entityName = entity.name;
+
+        if (isRail(entityName)) {
             state.rails.push(entity);
-            sortRails();
-        } else if (isTile(entity)) {
+        } else if (isTile(entityName)) {
             distributeTile(entity);
+        } else if (isBelt(entityName)) {
+            state.belts.push(entity);
         } else {
+            if (isBeltEntity(entityName)) {
+                state.belts.push(entity);
+            }
             state.buildings.push(entity);
-            sortBuildings();
+        }
+    });
+};
+
+
+
+
+
+
+
+
+
+
+const getDirectonVersion = entity => {
+    let entityName = entity.name,
+        entityReference = referenceTable[entityName],
+        directionCount = entityReference["dir-count"],
+        entityDirection = entity.direction;
+
+    if(directionCount) {
+        if(directionCount < NUMBER_OF_DIRS) {
+            entityDirection = entityDirection / 2;
+        }
+
+        return entityReference["dir-versions"][entityDirection];
+    }
+}
+
+
+
+
+
+
+
+
+const notLoaded = (array,entityName) => {
+    // console.log(!Object.keys(state.loadedImages).includes(entityName));
+    return !array.includes(entityName);
+}
+
+const hasShadow = entity => {
+    let entityName = entity.name,
+        entityReference = referenceTable[entityName],
+        hasDirectionVersions = entityReference["dir-versions"] !== undefined;
+
+    if (hasDirectionVersions) {
+        let directionVersion = getDirectonVersion(entity);
+            // entityReference["dir-versions"][entity.direction];
+        return directionVersion["shadow-image-pos"] !== undefined;
+    } else {
+        return entityReference["shadow-image-pos"] !== undefined;
+    }
+};
+
+const hasDisplay = entity => {
+    let entityName = entity.name,
+        entityReference = referenceTable[entityName],
+        hasDirectionVersions = entityReference["dir-versions"] !== undefined;
+
+    if (hasDirectionVersions) {
+        let directionVersion = getDirectonVersion(entity);
+            // entityReference["dir-versions"][entity.direction];
+        return directionVersion["combinator-display-offset"] !== undefined;
+    } else {
+        return entityReference["combinator-display-offset"] !== undefined;
+    }
+};
+
+const hasCircuitConnector = entity => {
+    let entityName = entity.name,
+        entityReference = referenceTable[entityName],
+        hasDirectionVersions = entityReference["dir-versions"] !== undefined,
+        hasConnector = entity["connections"] !== undefined,
+        isConnectorEntity;
+
+    if (hasDirectionVersions) {
+        let directionVersion = getDirectonVersion(entity);
+            // entityReference["dir-versions"][entity.direction];
+        isConnectorEntity =
+            directionVersion["circuit-connector-pos"] !== undefined;
+    } else {
+        isConnectorEntity =
+            entityReference["circuit-connector-pos"] !== undefined;
+    }
+
+    if (isConnectorEntity && hasConnector) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+const currentEntityStack = () => {
+    let entityStack = [];
+
+    state.entities.forEach(entity => {
+        let entityName = entity.name;
+
+        if (notLoaded(entityStack,entityName)) entityStack.push(entityName);
+
+        if (hasShadow(entity)) {
+            if (notLoaded(entityStack,"shadows")) { entityStack.push("shadows") };
+        }
+
+        if (hasDisplay(entity)) {
+            if (notLoaded(entityStack,"combinator-operators"))
+                entityStack.push("combinator-operators");
+        }
+
+        if (isBelt(entityName) && hasCircuitConnector(entity)) {
+            if (notLoaded(entityStack,"transport-belt-circuit-connector"))
+                entityStack.push("transport-belt-circuit-connector");
+        } else if (isInserter(entityName) && hasCircuitConnector(entity)) {
+            if (notLoaded(entityStack,"inserter-circuit-connector"))
+                entityStack.push("inserter-circuit-connector");
+        } else if (hasCircuitConnector(entity)) {
+            if (notLoaded(entityStack,"circuit-connector"))
+                entityStack.push("circuit-connector");
+        }
+
+        if (isTile(entityName)) {
+            if (notLoaded(entityStack,"curb")) entityStack.push("curb");
+            if (notLoaded(entityStack,"tile-mask")) entityStack.push("tile-mask");
         }
     });
 
-    setTilesConture();
+    return entityStack;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 setEntities();
 setGridSize();
 setOffset();
 normalizeCoordinates();
 distributeEntities();
+
+sortBuildings();
+sortRails();
 setRailCovers();
 
-console.log(state);
+console.log(state, "FINALE");
+console.log("entityStack", currentEntityStack().sort());
 
 console.timeEnd();

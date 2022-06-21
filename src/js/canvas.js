@@ -1,4 +1,4 @@
-import state, {GRID_PX} from "./globals";
+import {state, GRID_PX} from "./globals";
 
 class Canvas {
     constructor(canvasId) {
