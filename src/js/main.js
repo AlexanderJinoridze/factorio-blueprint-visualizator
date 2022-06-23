@@ -1,48 +1,45 @@
-import { state, NUMBER_OF_DIRS } from "./globals";
+import {
+    state,
+    NUMBER_OF_DIRS
+} from "./globals";
 import referenceTable from "./referenceTable";
 
 console.time();
 
-const isRail = entityName =>
-    ["straight-rail", "curved-rail"].includes(entityName);
+const isRail = entityName => ["straight-rail", "curved-rail"].includes(entityName);
 
 const isInserter = entityName => entityName.includes("inserter");
 
-const isBelt = entityName =>
-    [
-        "transport-belt",
-        "fast-transport-belt",
-        "express-transport-belt",
-    ].includes(entityName);
+const isBelt = entityName => [
+    "transport-belt",
+    "fast-transport-belt",
+    "express-transport-belt",
+].includes(entityName);
 
-const isBeltEntity = entityName =>
-    [
-        "underground-belt",
-        "fast-underground-belt",
-        "express-underground-belt",
-        "splitter",
-        "fast-splitter",
-        "express-splitter",
-    ].includes(entityName);
+const isBeltEntity = entityName => [
+    "underground-belt",
+    "fast-underground-belt",
+    "express-underground-belt",
+    "splitter",
+    "fast-splitter",
+    "express-splitter",
+].includes(entityName);
 
-const isTile = entityName =>
-    [
-        "stone-path",
-        "concrete",
-        "hazard-concrete-left",
-        "hazard-concrete-right",
-        "refined-concrete",
-        "refined-hazard-concrete-left",
-        "refined-hazard-concrete-right",
-    ].includes(entityName);
+const isTile = entityName => [
+    "stone-path",
+    "concrete",
+    "hazard-concrete-left",
+    "hazard-concrete-right",
+    "refined-concrete",
+    "refined-hazard-concrete-left",
+    "refined-hazard-concrete-right",
+].includes(entityName);
 
-const isHazardConcrete = entityName =>
-    ["hazard-concrete-left", "hazard-concrete-right"].includes(entityName);
+const isHazardConcrete = entityName => ["hazard-concrete-left", "hazard-concrete-right"].includes(entityName);
 
-const isRefinedHazardConcrete = entityName =>
-    ["refined-hazard-concrete-left", "refined-hazard-concrete-right"].includes(
-        entityName
-    );
+const isRefinedHazardConcrete = entityName => ["refined-hazard-concrete-left", "refined-hazard-concrete-right"].includes(
+    entityName
+);
 
 const getGridCoord = entity => {
     let gridSize = getGridSize(entity),
@@ -70,9 +67,15 @@ const getGridSize = entity => {
             gridArray.reverse();
         }
 
-        result = { w: gridArray[0], h: gridArray[1] };
+        result = {
+            w: gridArray[0],
+            h: gridArray[1]
+        };
     } else {
-        result = { w: gridSize, h: gridSize };
+        result = {
+            w: gridSize,
+            h: gridSize
+        };
     }
 
     return result;
@@ -185,20 +188,23 @@ const getEntitiesAt = (x, y) => {
 
 const setRailCovers = () => {
     state.rails.forEach(rail => {
-        let { x, y } = rail.position;
+        let {
+            x,
+            y
+        } = rail.position;
 
         referenceTable[rail.name]["dir-versions"][rail.direction][
             "end-points"
         ].forEach(endPointRef => {
             let [railCoverX, railCoverY] =
-                    endPointRef["rail-cover-coord-offset"],
+                endPointRef["rail-cover-coord-offset"],
                 railCoverGlobalCoordX = x + railCoverX,
                 railCoverGlobalCoordY = y + railCoverY,
                 railCoverDirection = endPointRef["rail-cover-dir"],
                 isEndOfLine = endPointRef["rail-path-vars"].every(
                     railPathVar => {
                         let [railPathVarX, railPathVarY] =
-                                railPathVar["rail-coord-offset"],
+                            railPathVar["rail-coord-offset"],
                             nextRails = getEntitiesAt(
                                 x + railPathVarX,
                                 y + railPathVarY
@@ -209,7 +215,7 @@ const setRailCovers = () => {
 
                             if (
                                 nextRail.direction ===
-                                    railPathVar["rail-dir"] &&
+                                railPathVar["rail-dir"] &&
                                 nextRail.name === railPathVar["rail-type"]
                             ) {
                                 return false;
@@ -290,41 +296,20 @@ const distributeEntities = () => {
     });
 };
 
-
-
-
-
-
-
-
-
-
 const getDirectonVersion = entity => {
     let entityName = entity.name,
         entityReference = referenceTable[entityName],
         directionCount = entityReference["dir-count"],
         entityDirection = entity.direction;
 
-    if(directionCount) {
-        if(directionCount < NUMBER_OF_DIRS) {
+    if (directionCount) {
+        if (directionCount < NUMBER_OF_DIRS) {
             entityDirection = entityDirection / 2;
         }
 
         return entityReference["dir-versions"][entityDirection];
     }
-}
-
-
-
-
-
-
-
-
-const notLoaded = (array,entityName) => {
-    // console.log(!Object.keys(state.loadedImages).includes(entityName));
-    return !array.includes(entityName);
-}
+};
 
 const hasShadow = entity => {
     let entityName = entity.name,
@@ -333,7 +318,7 @@ const hasShadow = entity => {
 
     if (hasDirectionVersions) {
         let directionVersion = getDirectonVersion(entity);
-            // entityReference["dir-versions"][entity.direction];
+        // entityReference["dir-versions"][entity.direction];
         return directionVersion["shadow-image-pos"] !== undefined;
     } else {
         return entityReference["shadow-image-pos"] !== undefined;
@@ -347,7 +332,7 @@ const hasDisplay = entity => {
 
     if (hasDirectionVersions) {
         let directionVersion = getDirectonVersion(entity);
-            // entityReference["dir-versions"][entity.direction];
+        // entityReference["dir-versions"][entity.direction];
         return directionVersion["combinator-display-offset"] !== undefined;
     } else {
         return entityReference["combinator-display-offset"] !== undefined;
@@ -361,15 +346,17 @@ const hasCircuitConnector = entity => {
         hasConnector = entity["connections"] !== undefined,
         isConnectorEntity;
 
-    if (hasDirectionVersions) {
-        let directionVersion = getDirectonVersion(entity);
-            // entityReference["dir-versions"][entity.direction];
-        isConnectorEntity =
-            directionVersion["circuit-connector-pos"] !== undefined;
+    if(isBelt(entityName) || isInserter(entityName)) {
+        isConnectorEntity = true;
     } else {
-        isConnectorEntity =
-            entityReference["circuit-connector-pos"] !== undefined;
+        if (hasDirectionVersions) {
+            let directionVersion = getDirectonVersion(entity);
+            isConnectorEntity = directionVersion["circuit-connector-pos"] !== undefined;
+        } else {
+            isConnectorEntity = entityReference["circuit-connector-pos"] !== undefined;
+        }
     }
+
 
     if (isConnectorEntity && hasConnector) {
         return true;
@@ -378,60 +365,61 @@ const hasCircuitConnector = entity => {
     }
 };
 
-const currentEntityStack = () => {
-    let entityStack = [];
+var promises = [];
 
+function loadImage(imageName) {
+    return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.addEventListener("load", () => {
+            resolve(img);
+        });
+        img.addEventListener("error", () =>
+            reject(new Error(`Failed to load ${imageName}`))
+        );
+        img.src = `images/${imageName}.png`;
+    }).then(img => state.loadedImages[imageName] = img);
+}
+
+const getImage = imageName => {
+    let alreadyLoadedImages = state.currentPendingImage;
+
+    if (!alreadyLoadedImages.includes(imageName)) {
+        promises.push(loadImage(imageName));
+        state.currentPendingImage.push(imageName);
+    }
+};
+
+const currentEntityStack = () => {
     state.entities.forEach(entity => {
         let entityName = entity.name;
 
-        if (notLoaded(entityStack,entityName)) entityStack.push(entityName);
+        getImage(entityName);
 
         if (hasShadow(entity)) {
-            if (notLoaded(entityStack,"shadows")) { entityStack.push("shadows") };
+            getImage("shadows");
         }
 
         if (hasDisplay(entity)) {
-            if (notLoaded(entityStack,"combinator-operators"))
-                entityStack.push("combinator-operators");
+            getImage("combinator-operators");
         }
 
         if (isBelt(entityName) && hasCircuitConnector(entity)) {
-            if (notLoaded(entityStack,"transport-belt-circuit-connector"))
-                entityStack.push("transport-belt-circuit-connector");
+            getImage("transport-belt-circuit-connector");
         } else if (isInserter(entityName) && hasCircuitConnector(entity)) {
-            if (notLoaded(entityStack,"inserter-circuit-connector"))
-                entityStack.push("inserter-circuit-connector");
+            getImage("inserter-circuit-connector");
         } else if (hasCircuitConnector(entity)) {
-            if (notLoaded(entityStack,"circuit-connector"))
-                entityStack.push("circuit-connector");
+            getImage("circuit-connector");
         }
 
         if (isTile(entityName)) {
-            if (notLoaded(entityStack,"curb")) entityStack.push("curb");
-            if (notLoaded(entityStack,"tile-mask")) entityStack.push("tile-mask");
+            getImage("curb");
+            getImage("tile-mask");
         }
     });
-
-    return entityStack;
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 setEntities();
+currentEntityStack();
 setGridSize();
 setOffset();
 normalizeCoordinates();
@@ -441,7 +429,40 @@ sortBuildings();
 sortRails();
 setRailCovers();
 
-console.log(state, "FINALE");
-console.log("entityStack", currentEntityStack().sort());
+Promise.all(promises).then(
+    () => {
+
+        var canvas = document.getElementById("main-canvas");
+        var ctx = canvas.getContext("2d");
+
+        state.buildings.forEach((building, i) => {
+            var buildingName = building.name;
+            // var {coordX, coordY} = building.position;
+            var buildingReference = referenceTable[buildingName];
+            var buildingDirection = building.direction;
+
+            let directionCount = buildingReference["dir-count"];
+
+            if (directionCount) {
+                if (directionCount < NUMBER_OF_DIRS) {
+                    buildingDirection = buildingDirection / 2;
+                }
+            }
+            
+            
+            if(typeof buildingReference["image-size"] === "number"){
+                var imageSizeX = buildingReference["image-size"];
+                var imageSizeY = buildingReference["image-size"];
+            } else {
+                var [imageSizeX, imageSizeY] = buildingReference["image-size"];
+            }
+
+            ctx.drawImage(state.loadedImages[buildingName], imageSizeX * buildingDirection, 0, imageSizeX, imageSizeY, 50*i, 0, imageSizeX, imageSizeY);
+        })
+    },
+    reason => {
+        console.log(reason);
+    }
+);
 
 console.timeEnd();
