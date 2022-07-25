@@ -4,7 +4,7 @@
 
 <h1>Factorio Blueprint Visualizator</h1>
 
-<img src="https://img.shields.io/badge/-VanilaJS-efd81d?logo=javascript&logoColor=black&style=for-the-badge" alt="Vanila JS" /> <img src="https://img.shields.io/badge/-NPM-CB3837?logo=npm&logoColor=black&style=for-the-badge" alt="NPM" /> <img src="https://img.shields.io/badge/-Webpack-8DD6F9?logo=webpack&logoColor=black&style=for-the-badge" alt="Webpack" /> <img src="https://img.shields.io/badge/-SASS/SCSS-CC6699?logo=sass&logoColor=white&style=for-the-badge" alt="SASS" /> <img src="https://img.shields.io/badge/-JSON-000000?logo=json&logoColor=white&style=for-the-badge" alt="SASS" />
+<img src="https://img.shields.io/badge/-VanilaJS-efd81d?logo=javascript&logoColor=black&style=for-the-badge" alt="Vanila JS" /> <img src="https://img.shields.io/badge/-NPM-CB3837?logo=npm&logoColor=black&style=for-the-badge" alt="NPM" /> <img src="https://img.shields.io/badge/-Webpack-8DD6F9?logo=webpack&logoColor=black&style=for-the-badge" alt="Webpack" /> <img src="https://img.shields.io/badge/-SASS/SCSS-CC6699?logo=sass&logoColor=white&style=for-the-badge" alt="SASS" /> <img src="https://img.shields.io/badge/-JSON-000000?logo=json&logoColor=white&style=for-the-badge" alt="JSON" />
 
 <br>
 <h3 align="center">⚠️ WORK IN PROGRESS, VERY RAW ⚠️</h3>
