@@ -14,4 +14,8 @@
 <br>
 
 <h4>This app is built (or rather will be built ⌛) around the video game <a href="https://wiki.factorio.com/" target="_blank">Factorio</a></h4>
-<p>This app will turn in-game generated or taken from platforms such as <a href="https://factorioprints.com/" target="_blank">factorioprints.com</a> a <a href="https://wiki.factorio.com/Blueprint_string_format" target="_blank">blueprint string</a> <i>(which is just a compressed JSON)</i> and first turns it into a plain JSON object and then using that JSON and also Javascript and HTML5 Canvas, this app will generate an image of the factory, this blueprint represents, which then can be downloaded and posted on platforms such as Reddit, for example</p>
+<p>This app will turn in-game generated or taken from platforms such as <a href="https://factorioprints.com/" target="_blank">factorioprints.com</a> a <a href="https://wiki.factorio.com/Blueprint_string_format" target="_blank">blueprint string</a> <i>(which is just a compressed JSON)</i> and first turns it into a plain JSON object and then using that JSON and also Javascript and HTML5 Canvas, this app will generate an image of the factory, this blueprint represents, something like this:</p>
+<p align="center">
+<img src="https://i.imgur.com/YsHJ5WL.png" alt="sample factory" />
+<p>
+<p>This image then can be downloaded and posted on platforms such as Reddit, for example</p>
