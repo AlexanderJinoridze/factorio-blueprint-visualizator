@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+body {
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+    font-size: 1rem;
+    padding: 0;
+    border: none;
+    background-color: #f6f6f6;
+    margin: 0;
+}
+
+canvas {
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+.blueprint-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#blueprint_string {
+    font-family: "Roboto Mono", monospace;
+}
+
+#build_factory {
+    font-family: "Roboto Mono", monospace;
+}

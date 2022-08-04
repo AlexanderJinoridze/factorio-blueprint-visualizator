@@ -1,7 +1,2 @@
-import "./sass/index.scss";
+import "./css/index.css";
 import "./js/main.js";
-
-import {MainCanvas, TileMask} from "./js/canvas";
-
-
-console.log(new MainCanvas(), new TileMask())

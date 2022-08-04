@@ -1,6 +1,6 @@
 const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -8,7 +8,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const isDev = process.env.NODE_ENV === "development";
 const isProd = !isDev;
 
-const filename = (ext) => isDev? `[name].${ext}` : `[name].[hash].${ext}`;
+const filename = (ext) => isProd ? `[name].${ext}` : `[name].[hash].${ext}`;
 
 const optimization = () => {
     const config = {
@@ -17,7 +17,7 @@ const optimization = () => {
         }
     };
 
-    if(isProd){
+    if (isProd) {
         config.minimize = true;
         config.minimizer = [
             `...`,
@@ -38,7 +38,7 @@ const cssLoaders = extra => {
         "postcss-loader"
     ];
 
-    if(extra){
+    if (extra) {
         loaders.push(extra);
     }
 
@@ -76,7 +76,7 @@ const plugins = () => {
 
 module.exports = {
     target: 'web',
-    context: path.join(__dirname,"src"),
+    context: path.join(__dirname, "src"),
     mode: "development",
     entry: "./index.js",
     output: {
@@ -87,37 +87,37 @@ module.exports = {
     devServer: {
         port: 4200
     },
-    devtool: isDev? "source-map": false,
+    devtool: isDev ? "source-map" : false,
     plugins: plugins(),
     module: {
         rules: [{
-                test: /\.css$/,
-                use: cssLoaders()
-            },
-            {
-                test: /\.s[ac]ss$/,
-                use: cssLoaders("sass-loader")
-            },
-            {
-                test: /\.(png|jpg|jpeg|svg|gif)$/,
-                use: ["file-loader"]
-            },
-            {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                use: ["file-loader"]
-            },
-            {
-                test: /\.m?js$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: [
-                            "@babel/preset-env"
-                        ]
-                    }
+            test: /\.css$/,
+            use: cssLoaders()
+        },
+        {
+            test: /\.s[ac]ss$/,
+            use: cssLoaders("sass-loader")
+        },
+        {
+            test: /\.(png|jpg|jpeg|svg|gif)$/,
+            use: ["file-loader"]
+        },
+        {
+            test: /\.(ttf|woff|woff2|eot)$/,
+            use: ["file-loader"]
+        },
+        {
+            test: /\.m?js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: "babel-loader",
+                options: {
+                    presets: [
+                        "@babel/preset-env"
+                    ]
                 }
             }
+        }
         ]
     }
 }
