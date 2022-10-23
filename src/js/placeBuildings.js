@@ -1,12 +1,15 @@
 import reference from "./reference.json";
 import { state, loadedImages, NUMBER_OF_DIRS } from "./globals";
+import { toPX } from "./helpers";
 
 export default function placeBuildings(ctx) {
     state.buildings.forEach((building, i) => {
         var buildingName = building.name;
-        // var {coordX, coordY} = building.position;
+        var { x: coordX, y: coordY } = building.position;
         var buildingReference = reference[buildingName];
         var buildingDirection = building.direction;
+        var centerOffsetX;
+        var centerOffsetY;
 
         let directionCount = buildingReference["dir-count"];
 
@@ -23,6 +26,22 @@ export default function placeBuildings(ctx) {
             var [imageSizeX, imageSizeY] = buildingReference["image-size"];
         }
 
-        ctx.drawImage(loadedImages[buildingName], imageSizeX * buildingDirection, 0, imageSizeX, imageSizeY, 120 * i, 0, imageSizeX, imageSizeY);
-    })
+        if (reference[buildingName]["image-offset"]) {
+            [centerOffsetX, centerOffsetY] = reference[buildingName]["image-offset"];
+        } else {
+            centerOffsetX = centerOffsetY = -reference[buildingName]["image-size"] / 2;
+        }
+
+        ctx.drawImage(
+            loadedImages[buildingName],
+            imageSizeX * buildingDirection,
+            0,
+            imageSizeX,
+            imageSizeY,
+            toPX(reference["canvas-padding"]["left"] + coordX) + centerOffsetX,
+            toPX(reference["canvas-padding"]["top"] + coordY) + centerOffsetY,
+            imageSizeX,
+            imageSizeY
+        );
+    });
 }

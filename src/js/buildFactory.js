@@ -1,16 +1,14 @@
-import { createCanvas } from "./helpers";
+import reference from "./reference.json";
+
+import { createCanvas, toPX } from "./helpers";
 import { state, promises } from "./globals";
 
 import decodeBlueprint from "./decodeBlueprint";
 import isValidBlueprint from "./isValidBlueprint";
-import currentEntityStack from "./currentEntityStack";
 import setStructures from "./setStructures";
-import setGridSize from "./setGridSize";
-import setOffset from "./setOffset";
-import normalizeCoordinates from "./normalizeCoordinates";
+import collectImages from "./collectImages";
+import normalizeBlueprint from "./normalizeBlueprint";
 import distributeStructures from "./distributeStructures";
-import sortBuildings from "./sortBuildings";
-import sortRails from "./sortRails";
 import setRailCovers from "./setRailCovers";
 
 import drawBase from "./drawBase";
@@ -18,8 +16,6 @@ import placeBuildings from "./placeBuildings";
 
 export default async function buildFactory(blueprintString) {
     Object.assign(state, {
-        blueprintString: "",
-        decodedBlueprint: {},
         canvasSize: { w: 0, h: 0 },
         dimensions: {
             minX: Number.POSITIVE_INFINITY,
@@ -36,53 +32,59 @@ export default async function buildFactory(blueprintString) {
         belts: [],
         tiles: {
             "stone-path": [],
-            "concrete": [],
+            concrete: [],
             "hazard-concrete-left": [],
             "hazard-concrete-right": [],
             "refined-concrete": [],
             "refined-hazard-concrete-left": [],
-            "refined-hazard-concrete-right": []
-        }
+            "refined-hazard-concrete-right": [],
+        },
     });
 
-    state.blueprintString = blueprintString;
+    const decodedBlueprint = decodeBlueprint(blueprintString);
 
-    decodeBlueprint();
+    if (isValidBlueprint(decodedBlueprint)) {
+        state.structures = setStructures(decodedBlueprint);
+        collectImages(state.structures);
 
-    if (!isValidBlueprint(state.decodedBlueprint)) {
-        console.log("NOT VALID");
-        return false;
-    }
+        normalizeBlueprint(state);
+        distributeStructures();
+        // setRailCovers();
 
-    setStructures();
-    currentEntityStack();
-
-    setGridSize();
-
-    setOffset();
-    normalizeCoordinates();
-    distributeStructures();
-
-    sortBuildings();
-
-    sortRails();
-    setRailCovers();
-
-    await Promise.all(promises)
-        .then(
+        await Promise.all(promises).then(
             () => {
-                let canvas = createCanvas(),
+                let canvas = createCanvas(
+                        toPX(
+                            state.canvasSize.w +
+                                reference["canvas-padding"]["left"] +
+                                reference["canvas-padding"]["right"]
+                        ),
+                        toPX(
+                            state.canvasSize.h +
+                                reference["canvas-padding"]["top"] +
+                                reference["canvas-padding"]["bottom"]
+                        )
+                    ),
                     ctx = canvas.getContext("2d");
-
 
                 drawBase(ctx);
                 placeBuildings(ctx);
 
+                let loadImage = (url) =>
+                    new Promise((resolve, reject) => {
+                        const img = new Image();
+                        img.addEventListener("load", () => resolve(img));
+                        img.addEventListener("error", () => reject(new Error(`Failed to load factory`)));
+                        img.src = url;
+                    });
 
-                document.body.appendChild(canvas);
+                loadImage(canvas.toDataURL("image/png", 0.1)).then((img) => document.body.appendChild(img));
             },
-            reason => {
+            (reason) => {
                 console.log(reason);
             }
         );
+    } else {
+        console.log("NOT VALID");
+    }
 }

@@ -1,32 +1,42 @@
-import { state, GRID_PX } from "./globals";
+import { state } from "./globals";
+import { toPX } from "./helpers";
+import reference from "./reference.json";
 
-
-const writeWithPXFont = (x, y, number) => {
-
-}
+const writeWithPXFont = (x, y, number) => {};
 
 function drawBoard(context, spX, spY) {
-    let { w: gridSizeX, h: gridSizeY } = state.gridSize;
+    let { w: gridSizeX, h: gridSizeY } = state.canvasSize;
 
     for (var x = 0; x <= gridSizeX; x++) {
-        context.moveTo(GRID_PX * x + GRID_PX * spX, GRID_PX * spY - (GRID_PX - 2));
-        context.lineTo(GRID_PX * x + GRID_PX * spX, GRID_PX * gridSizeY + GRID_PX * spY);
+        context.moveTo(toPX(x + spX), toPX(spY - 1) + 2);
+
+        context.lineTo(toPX(x + spX), toPX(gridSizeY + spY));
     }
 
     for (var y = 0; y <= gridSizeY; y++) {
-        context.moveTo(GRID_PX * spX - (GRID_PX - 2), GRID_PX * y + GRID_PX * spY);
-        context.lineTo(GRID_PX * gridSizeX + GRID_PX * spX, GRID_PX * y + GRID_PX * spY);
+        context.moveTo(toPX(spX - 1) + 2, toPX(y + spY));
+
+        context.lineTo(toPX(gridSizeX + spX), toPX(y + spY));
     }
 
     context.strokeStyle = "#606060";
-    context.lineWidth = 4;
-    context.lineCap = 'square';
+    context.lineWidth = reference["grid-border-width"];
+    context.lineCap = "square";
     context.stroke();
 }
 
 export default function drawBase(ctx) {
-    ctx.fillStyle = "#303030";
-    ctx.fillRect(0, 0, state.canvasSize.w, state.canvasSize.h);
+    try {
+        ctx.fillStyle = "#303030";
+        ctx.fillRect(
+            0,
+            0,
+            toPX(state.canvasSize.w + reference["canvas-padding"]["left"] + reference["canvas-padding"]["right"]),
+            toPX(state.canvasSize.h + reference["canvas-padding"]["top"] + reference["canvas-padding"]["bottom"])
+        );
 
-    drawBoard(ctx, 2, 3.5);
+        drawBoard(ctx, reference["canvas-padding"]["left"], reference["canvas-padding"]["top"]);
+    } catch (e) {
+        console.log(e);
+    }
 }

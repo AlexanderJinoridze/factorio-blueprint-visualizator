@@ -1,11 +1,15 @@
 const Base64 = {
-
     _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
 
     encode: function (input) {
         let output = "",
-            chr1, chr2, chr3,
-            enc1, enc2, enc3, enc4,
+            chr1,
+            chr2,
+            chr3,
+            enc1,
+            enc2,
+            enc3,
+            enc4,
             i = 0;
 
         while (i < input.length) {
@@ -37,8 +41,13 @@ const Base64 = {
 
     encodeU: function (input) {
         let output = "",
-            chr1, chr2, chr3,
-            enc1, enc2, enc3, enc4,
+            chr1,
+            chr2,
+            chr3,
+            enc1,
+            enc2,
+            enc3,
+            enc4,
             i = 0;
 
         while (i < input.length) {
@@ -70,8 +79,13 @@ const Base64 = {
 
     decode: function (input) {
         let output = "",
-            chr1, chr2, chr3,
-            enc1, enc2, enc3, enc4,
+            chr1,
+            chr2,
+            chr3,
+            enc1,
+            enc2,
+            enc3,
+            enc4,
             i = 0;
 
         input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
@@ -97,7 +111,7 @@ const Base64 = {
         }
 
         return output;
-    }
+    },
 };
 
 export default Base64;

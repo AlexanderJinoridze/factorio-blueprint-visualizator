@@ -1,13 +1,21 @@
-import { filterEntities, filterTiles, isObject, isArray, isNumber, isString } from "./helpers";
+import { isEntity, isTile, isObject, isArray, isNumber, isString } from "./helpers";
+
+function filterEntities(entities) {
+    return entities.filter((entity) => {
+        return isEntity(entity.name);
+    });
+}
+
+function filterTiles(tiles) {
+    return tiles.filter((tile) => {
+        return isTile(tile.name);
+    });
+}
 
 function isValidPositon(position) {
     let valid = false;
 
-    if (
-        isObject(position) &&
-        isNumber(position["x"]) &&
-        isNumber(position["y"])
-    ) {
+    if (isObject(position) && isNumber(position["x"]) && isNumber(position["y"])) {
         valid = true;
     }
 
@@ -17,11 +25,7 @@ function isValidPositon(position) {
 function isValidStructure(structure) {
     let valid = false;
 
-    if (
-        isObject(structure) &&
-        isString(structure["name"]) &&
-        isValidPositon(structure["position"])
-    ) {
+    if (isObject(structure) && isString(structure["name"]) && isValidPositon(structure["position"])) {
         valid = true;
     }
 
@@ -40,7 +44,7 @@ export default function isValidBlueprint(blueprintObject) {
                     tiles = blueprint["tiles"] || [],
                     structures = [...entities, ...tiles];
 
-                valid = structures.every(structure => isValidStructure(structure));
+                valid = structures.every((structure) => isValidStructure(structure));
 
                 if (valid) {
                     let filteredEntities = filterEntities(entities),

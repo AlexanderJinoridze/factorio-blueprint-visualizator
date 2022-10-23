@@ -1,10 +1,8 @@
 import reference from "./reference.json";
-import { state, promises, loadedImages, alreadyLoadedImages } from "./globals";
+import { promises, loadedImages, alreadyLoadedImages } from "./globals";
 import { isBelt, isInserter, isTile } from "./helpers";
 
-
-
-const hasShadow = entity => {
+const hasShadow = (entity) => {
     let entityName = entity.name;
 
     if (!reference[entityName]) {
@@ -12,9 +10,9 @@ const hasShadow = entity => {
     }
 
     return reference[entityName]["has-shadow"];
-}
+};
 
-const hasDisplay = entity => {
+const hasDisplay = (entity) => {
     let entityName = entity.name;
 
     if (!reference[entityName]) {
@@ -22,9 +20,9 @@ const hasDisplay = entity => {
     }
 
     return reference[entityName]["has-display"];
-}
+};
 
-const hasCircuitConnector = entity => {
+const hasCircuitConnector = (entity) => {
     let entityName = entity.name;
 
     if (!reference[entityName]) {
@@ -35,23 +33,18 @@ const hasCircuitConnector = entity => {
         hasConnector = entity["connections"];
 
     return isConnectorEntity && hasConnector;
-}
-
+};
 
 function loadImage(imageName) {
     return new Promise((resolve, reject) => {
         const img = new Image();
-        img.addEventListener("load", () => {
-            resolve(img);
-        });
-        img.addEventListener("error", () =>
-            reject(new Error(`Failed to load ${imageName}`))
-        );
+        img.addEventListener("load", () => resolve(img));
+        img.addEventListener("error", () => reject(new Error(`Failed to load ${imageName}`)));
         img.src = `images/${imageName}.png`;
-    }).then(img => loadedImages[imageName] = img);
+    }).then((img) => (loadedImages[imageName] = img));
 }
 
-const getImage = function (imageName) {
+function getImage(imageName) {
     if (!alreadyLoadedImages.includes(imageName)) {
         alreadyLoadedImages.push(imageName);
 
@@ -59,29 +52,29 @@ const getImage = function (imageName) {
     }
 }
 
-export default function currentEntityStack() {
-    state.structures.forEach(entity => {
-        let entityName = entity.name;
+export default function collectImages(structures) {
+    structures.forEach((structure) => {
+        let structureName = structure.name;
 
-        getImage(entityName);
+        getImage(structureName);
 
-        if (hasShadow(entity)) {
+        if (hasShadow(structure)) {
             getImage("shadows");
         }
 
-        if (hasDisplay(entity)) {
+        if (hasDisplay(structure)) {
             getImage("combinator-operators");
         }
 
-        if (isBelt(entityName) && hasCircuitConnector(entity)) {
+        if (isBelt(structureName) && hasCircuitConnector(structure)) {
             getImage("transport-belt-circuit-connector");
-        } else if (isInserter(entityName) && hasCircuitConnector(entity)) {
+        } else if (isInserter(structureName) && hasCircuitConnector(structure)) {
             getImage("inserter-circuit-connector");
-        } else if (hasCircuitConnector(entity)) {
+        } else if (hasCircuitConnector(structure)) {
             getImage("circuit-connector");
         }
 
-        if (isTile(entityName)) {
+        if (isTile(structureName)) {
             getImage("curb");
             getImage("tile-mask");
         }

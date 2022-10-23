@@ -1,87 +1,24 @@
-import reference from "./reference.json";
-import { state } from "./globals";
+import { GRID_PX, state } from "./globals";
 
+// export function getDirectionVersion(entity) {
+//     let entityName = entity.name,
+//         entityReference = reference[entityName],
+//         directionCount = entityReference["dir-count"],
+//         entityDirection = entity.direction;
 
-export function getDirectionVersion(entity) {
-    let entityName = entity.name,
-        entityReference = reference[entityName],
-        directionCount = entityReference["dir-count"],
-        entityDirection = entity.direction;
+//     if (directionCount) {
+//         if (directionCount < NUMBER_OF_DIRS) {
+//             entityDirection = entityDirection / 2;
+//         }
 
-    if (directionCount) {
-        if (directionCount < NUMBER_OF_DIRS) {
-            entityDirection = entityDirection / 2;
-        }
-
-        return entityReference["dir-versions"][entityDirection];
-    }
-}
-
-
-export function createCanvas() {
-    let canvas = document.createElement("canvas");
-
-    canvas.width = state.canvasSize.w;
-    canvas.height = state.canvasSize.h;
-
-    return canvas;
-}
-
-
-export function zOrderSort(a, b) {
-    let [aCoordX, aCoordY] = a,
-        [bCoordX, bCoordY] = b;
-
-    return aCoordY - bCoordY || aCoordX - bCoordX;
-}
-
-export function getGridSize(entity) {
-    let entityName = entity.name,
-        entityRef = reference[entityName],
-        gridSize = entityRef["grid-size"] || 1,
-        result;
-
-    if (isArray(gridSize)) {
-        let gridArray = [...gridSize];
-
-        if ([2, 3, 6, 7].includes(entity.direction)) {
-            gridArray.reverse();
-        }
-
-        result = {
-            w: gridArray[0],
-            h: gridArray[1]
-        };
-    } else {
-        result = {
-            w: gridSize,
-            h: gridSize
-        };
-    }
-
-    return result;
-}
-
-export function getGridCoord(entity) {
-    let gridSize = getGridSize(entity),
-        entityPos = entity.position,
-        [halfOfGridW, halfOfGridH] = [gridSize.w / 2, gridSize.h / 2];
-
-    return [
-        entityPos.x - halfOfGridW,
-        entityPos.y - halfOfGridH,
-        entityPos.x + halfOfGridW,
-        entityPos.y + halfOfGridH,
-    ];
-}
-
-
-
+//         return entityReference["dir-versions"][entityDirection];
+//     }
+// }
 
 export function getStructuresAt(x, y) {
     var found = [];
 
-    state.structures.forEach(structure => {
+    state.structures.forEach((structure) => {
         let structurePosition = structure.position;
 
         if (structurePosition.x === x && structurePosition.y === y) {
@@ -92,29 +29,30 @@ export function getStructuresAt(x, y) {
     return found;
 }
 
+export function createCanvas(w, h) {
+    let canvas = document.createElement("canvas");
 
+    canvas.width = w;
+    canvas.height = h;
 
-export function filterEntities(entities) {
-    return entities.filter(entity => {
-        return isEntity(entity.name);
-    })
+    return canvas;
 }
 
-export function filterTiles(tiles) {
-    return tiles.filter(tile => {
-        return isTile(tile.name);
-    })
+export function zOrderSort(a, b) {
+    return a.y - b.y || a.x - b.x;
 }
 
-export function filterStructures(structures) {
-    return structures.filter(structure => {
-        let structureName = structure.name;
-        return isEntity(structureName) || isTile(structureName);
-    })
+export function toPX(number) {
+    return GRID_PX * (isNumber(number) ? number : 1);
 }
 
-
-
+export function parseJSON(stringifiedJSON) {
+    try {
+        return JSON.parse(stringifiedJSON);
+    } catch (e) {
+        return {};
+    }
+}
 
 export function isString(val) {
     return typeof val === "string";
@@ -132,8 +70,9 @@ export function isArray(val) {
     return Array.isArray(val);
 }
 
-
-
+export function isOppositDirection(directionIndex) {
+    return [2, 3, 6, 7].includes(directionIndex);
+}
 
 export function isInserter(entityName) {
     return [
@@ -143,16 +82,12 @@ export function isInserter(entityName) {
         "inserter",
         "long-handed-inserter",
         "stack-filter-inserter",
-        "stack-inserter"
+        "stack-inserter",
     ].includes(entityName);
 }
 
 export function isBelt(entityName) {
-    return [
-        "transport-belt",
-        "fast-transport-belt",
-        "express-transport-belt"
-    ].includes(entityName);
+    return ["transport-belt", "fast-transport-belt", "express-transport-belt"].includes(entityName);
 }
 
 export function isBeltEntity(entityName) {
@@ -162,7 +97,7 @@ export function isBeltEntity(entityName) {
         "express-underground-belt",
         "splitter",
         "fast-splitter",
-        "express-splitter"
+        "express-splitter",
     ].includes(entityName);
 }
 
@@ -174,29 +109,20 @@ export function isTile(entityName) {
         "hazard-concrete-right",
         "refined-concrete",
         "refined-hazard-concrete-left",
-        "refined-hazard-concrete-right"
+        "refined-hazard-concrete-right",
     ].includes(entityName);
 }
 
 export function isHazardConcrete(entityName) {
-    return [
-        "hazard-concrete-left",
-        "hazard-concrete-right"
-    ].includes(entityName);
+    return ["hazard-concrete-left", "hazard-concrete-right"].includes(entityName);
 }
 
 export function isRefinedHazardConcrete(entityName) {
-    return [
-        "refined-hazard-concrete-left",
-        "refined-hazard-concrete-right"
-    ].includes(entityName);
+    return ["refined-hazard-concrete-left", "refined-hazard-concrete-right"].includes(entityName);
 }
 
 export function isRail(entityName) {
-    return [
-        "straight-rail",
-        "curved-rail"
-    ].includes(entityName);
+    return ["straight-rail", "curved-rail"].includes(entityName);
 }
 
 export function isEntity(entityName) {
@@ -276,6 +202,6 @@ export function isEntity(entityName) {
         "train-stop",
         "transport-belt",
         "underground-belt",
-        "wooden-chest"
-    ].includes(entityName)
+        "wooden-chest",
+    ].includes(entityName);
 }

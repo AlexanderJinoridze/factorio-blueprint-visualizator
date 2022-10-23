@@ -1,6 +1,6 @@
 {
     "accumulator": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 256,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -17,7 +17,7 @@
         "shadow-offset": [-58, -40]
     },
     "arithmetic-combinator": {
-        "grid-size": [1, 2],
+        "collision-boundary-size": [1, 2],
         "image-size": 192,
         "has-shadow": true,
         "has-display": true,
@@ -90,7 +90,7 @@
         ]
     },
     "artillery-turret": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 576,
         "has-shadow": true,
         "dir-count": 4,
@@ -118,7 +118,7 @@
         ]
     },
     "assembling-machine-1": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "shadow-size": [190, 165],
@@ -126,7 +126,7 @@
         "shadow-offset": [-78, -71]
     },
     "assembling-machine-2": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "dir-count": 4,
@@ -179,7 +179,7 @@
         ]
     },
     "assembling-machine-3": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "dir-count": 4,
@@ -232,7 +232,7 @@
         ]
     },
     "beacon": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "beacon-slot-down-offset": [-63, -2],
@@ -242,7 +242,7 @@
         "shadow-offset": [-97, -86]
     },
     "big-electric-pole": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": [192, 320],
         "image-offset": [-96, -256],
         "has-shadow": true,
@@ -299,7 +299,7 @@
         ]
     },
     "boiler": {
-        "grid-size": [3, 2],
+        "collision-boundary-size": [3, 2],
         "image-size": 320,
         "has-shadow": true,
         "dir-count": 4,
@@ -391,7 +391,7 @@
         ]
     },
     "burner-inserter": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -444,7 +444,7 @@
         ]
     },
     "burner-mining-drill": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 192,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -505,7 +505,7 @@
         ]
     },
     "centrifuge": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 320,
         "has-shadow": true,
         "shadow-size": [346, 203],
@@ -513,7 +513,7 @@
         "shadow-offset": [-95, -94]
     },
     "chemical-plant": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 384,
         "has-shadow": true,
         "dir-count": 4,
@@ -621,7 +621,7 @@
         ]
     },
     "constant-combinator": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "dir-count": 4,
@@ -673,7 +673,7 @@
         ]
     },
     "curved-rail": {
-        "grid-size": [4, 8],
+        "collision-boundary-size": [4, 8],
         "image-size": 640,
         "dir-count": 8,
         "dir-versions": [
@@ -1008,7 +1008,7 @@
         ]
     },
     "decider-combinator": {
-        "grid-size": [1, 2],
+        "collision-boundary-size": [1, 2],
         "image-size": 192,
         "has-shadow": true,
         "has-display": true,
@@ -1081,7 +1081,7 @@
         ]
     },
     "electric-furnace": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -1090,7 +1090,7 @@
         "shadow-offset": [-90, -69]
     },
     "electric-mining-drill": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -1151,7 +1151,7 @@
         ]
     },
     "express-splitter": {
-        "grid-size": [2, 1],
+        "collision-boundary-size": [2, 1],
         "image-size": 192,
         "dir-count": 4,
         "dir-versions": [
@@ -1254,13 +1254,13 @@
         ]
     },
     "express-transport-belt": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-circuit-connector": true,
         "dir-count": 4
     },
     "express-underground-belt": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 192,
         "dir-count": 4,
         "dir-versions": [
@@ -1339,7 +1339,7 @@
         ]
     },
     "fast-inserter": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -1392,7 +1392,7 @@
         ]
     },
     "fast-splitter": {
-        "grid-size": [2, 1],
+        "collision-boundary-size": [2, 1],
         "image-size": 192,
         "dir-count": 4,
         "dir-versions": [
@@ -1495,13 +1495,13 @@
         ]
     },
     "fast-transport-belt": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-circuit-connector": true,
         "dir-count": 4
     },
     "fast-underground-belt": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 192,
         "dir-count": 4,
         "dir-versions": [
@@ -1580,7 +1580,7 @@
         ]
     },
     "filter-inserter": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -1633,7 +1633,7 @@
         ]
     },
     "flamethrower-turret": {
-        "grid-size": [2, 3],
+        "collision-boundary-size": [2, 3],
         "image-size": 320,
         "has-shadow": true,
         "dir-count": 4,
@@ -1709,14 +1709,14 @@
         ]
     },
     "gate": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 192,
         "has-shadow": true,
         "dir-count": 2,
         "shadow-image-pos": 12077
     },
     "gun-turret": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 256,
         "has-shadow": true,
         "dir-count": 4,
@@ -1744,7 +1744,7 @@
         ]
     },
     "heat-exchanger": {
-        "grid-size": [3, 2],
+        "collision-boundary-size": [3, 2],
         "image-size": 320,
         "has-shadow": true,
         "dir-count": 4,
@@ -1858,13 +1858,13 @@
         ]
     },
     "heat-pipe": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64,
         "has-shadow": true,
         "shadow-image-pos": 13461
     },
     "inserter": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -1917,7 +1917,7 @@
         ]
     },
     "iron-chest": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -1934,7 +1934,7 @@
         "shadow-offset": [-34, -12]
     },
     "lab": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "shadow-size": [243, 136],
@@ -1942,11 +1942,11 @@
         "shadow-offset": [-94, -45]
     },
     "land-mine": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
     "laser-turret": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 256,
         "has-shadow": true,
         "dir-count": 4,
@@ -1974,7 +1974,7 @@
         ]
     },
     "logistic-chest-active-provider": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -1991,7 +1991,7 @@
         "shadow-offset": [-31, -13]
     },
     "logistic-chest-buffer": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2008,7 +2008,7 @@
         "shadow-offset": [-31, -13]
     },
     "logistic-chest-passive-provider": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2025,7 +2025,7 @@
         "shadow-offset": [-31, -13]
     },
     "logistic-chest-requester": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2042,7 +2042,7 @@
         "shadow-offset": [-31, -13]
     },
     "logistic-chest-storage": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2059,7 +2059,7 @@
         "shadow-offset": [-31, -13]
     },
     "long-handed-inserter": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2112,7 +2112,7 @@
         ]
     },
     "medium-electric-pole": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": [128, 320],
         "image-offset": [-64, -224],
         "has-shadow": true,
@@ -2169,7 +2169,7 @@
         ]
     },
     "nuclear-reactor": {
-        "grid-size": 5,
+        "collision-boundary-size": 5,
         "image-size": 384,
         "image-pos": [0, 256],
         "has-shadow": true,
@@ -2250,7 +2250,7 @@
         "shadow-offset": [-159, -162]
     },
     "offshore-pump": {
-        "grid-size": [1, 2],
+        "collision-boundary-size": [1, 2],
         "image-size": 192,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2333,7 +2333,7 @@
         ]
     },
     "oil-refinery": {
-        "grid-size": 5,
+        "collision-boundary-size": 5,
         "image-size": 448,
         "has-shadow": true,
         "dir-count": 4,
@@ -2457,13 +2457,13 @@
         ]
     },
     "pipe": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "shadow-image-pos": 20188
     },
     "pipe-to-ground": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "dir-count": 4,
@@ -2501,7 +2501,7 @@
         ]
     },
     "power-switch": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 192,
         "has-shadow": true,
         "wire-connectors": {
@@ -2519,7 +2519,7 @@
         "shadow-image-pos": 21212
     },
     "programmable-speaker": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": [128, 256],
         "image-offset": [-64, -224],
         "has-shadow": true,
@@ -2537,7 +2537,7 @@
         "shadow-offset": [-12, -30]
     },
     "pump": {
-        "grid-size": [1, 2],
+        "collision-boundary-size": [1, 2],
         "image-size": 192,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2646,7 +2646,7 @@
         ]
     },
     "pumpjack": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 320,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2729,7 +2729,7 @@
         ]
     },
     "radar": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 288,
         "has-shadow": true,
         "shadow-size": [305, 173],
@@ -2737,7 +2737,7 @@
         "shadow-offset": [-107, -58]
     },
     "rail-chain-signal": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 448,
         "has-circuit-connector": true,
         "dir-count": 8,
@@ -2825,7 +2825,7 @@
         ]
     },
     "rail-signal": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 192,
         "has-circuit-connector": true,
         "dir-count": 8,
@@ -2913,7 +2913,7 @@
         ]
     },
     "roboport": {
-        "grid-size": 4,
+        "collision-boundary-size": 4,
         "image-size": 320,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -2930,13 +2930,13 @@
         "shadow-offset": [-89, -61]
     },
     "rocket-silo": {
-        "grid-size": 9,
+        "collision-boundary-size": 9,
         "image-size": 640,
         "has-shadow": true,
         "shadow-image-pos": 24027
     },
     "small-electric-pole": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": [128, 256],
         "image-offset": [-64, -224],
         "has-shadow": true,
@@ -2993,7 +2993,7 @@
         ]
     },
     "small-lamp": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -3010,7 +3010,7 @@
         "shadow-offset": [-29, -13]
     },
     "solar-panel": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "shadow-size": [219, 180],
@@ -3018,7 +3018,7 @@
         "shadow-offset": [-91, -77]
     },
     "splitter": {
-        "grid-size": [2, 1],
+        "collision-boundary-size": [2, 1],
         "image-size": 192,
         "dir-count": 4,
         "dir-versions": [
@@ -3121,7 +3121,7 @@
         ]
     },
     "stack-filter-inserter": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -3174,7 +3174,7 @@
         ]
     },
     "stack-inserter": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -3227,7 +3227,7 @@
         ]
     },
     "steam-engine": {
-        "grid-size": [3, 5],
+        "collision-boundary-size": [3, 5],
         "image-size": 448,
         "has-shadow": true,
         "dir-count": 2,
@@ -3269,7 +3269,7 @@
         ]
     },
     "steam-turbine": {
-        "grid-size": [3, 5],
+        "collision-boundary-size": [3, 5],
         "image-size": 448,
         "has-shadow": true,
         "dir-count": 2,
@@ -3311,7 +3311,7 @@
         ]
     },
     "steel-chest": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -3328,7 +3328,7 @@
         "shadow-offset": [-30, -5]
     },
     "steel-furnace": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 192,
         "has-shadow": true,
         "shadow-size": [277, 85],
@@ -3336,7 +3336,7 @@
         "shadow-offset": [-59, -19]
     },
     "stone-furnace": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 192,
         "has-shadow": true,
         "shadow-size": [164, 74],
@@ -3344,7 +3344,7 @@
         "shadow-offset": [-52, -10]
     },
     "stone-wall": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 192,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -3361,7 +3361,7 @@
         "shadow-offset": [-64, -64]
     },
     "storage-tank": {
-        "grid-size": 3,
+        "collision-boundary-size": 3,
         "image-size": 256,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -3432,7 +3432,7 @@
         ]
     },
     "straight-rail": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 256,
         "dir-count": 8,
         "dir-versions": [
@@ -3677,7 +3677,7 @@
         ]
     },
     "substation": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": [192, 384],
         "image-offset": [-96, -256],
         "has-shadow": true,
@@ -3734,7 +3734,7 @@
         ]
     },
     "train-stop": {
-        "grid-size": 2,
+        "collision-boundary-size": 2,
         "image-size": 512,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -3795,13 +3795,13 @@
         ]
     },
     "transport-belt": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-circuit-connector": true,
         "dir-count": 4
     },
     "underground-belt": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 192,
         "dir-count": 4,
         "dir-versions": [
@@ -3880,7 +3880,7 @@
         ]
     },
     "wooden-chest": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
@@ -3897,40 +3897,43 @@
         "shadow-offset": [-29, -7]
     },
     "stone-path": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
     "concrete": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
     "hazard-concrete-left": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
     "hazard-concrete-right": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
     "refined-concrete": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
     "refined-hazard-concrete-left": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
     "refined-hazard-concrete-right": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
-
     "tile-mask": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 96
     },
+    "tile": {
+        "collision-boundary-size": 1,
+        "image-size": 64
+    },
     "curb": {
-        "grid-size": 1,
+        "collision-boundary-size": 1,
         "image-size": 64
     },
     "canvas-padding": {
@@ -3942,7 +3945,7 @@
     "canvas-min-width": 6,
     "px-font-size": [14, 20],
     "px-font-offset": [6, 2],
-    "grid-border-width": 4,
+    "grid-border-width": 2,
     "base-logo-size": [256, 64],
     "base-logo-offset": [64, 48],
     "base-credit-size": [320, 64],

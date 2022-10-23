@@ -1,6 +1,6 @@
 import buildFactory from "./buildFactory";
 
-document.getElementById("build_factory").addEventListener("click", async event => {
+document.getElementById("build_factory").addEventListener("click", async (event) => {
     console.time();
 
     let buildFacotoryButton = event.target,
@@ -15,4 +15,4 @@ document.getElementById("build_factory").addEventListener("click", async event =
     buildFacotoryButton.disabled = false;
 
     console.timeEnd();
-})
+});
