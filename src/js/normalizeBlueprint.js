@@ -57,7 +57,6 @@ export default function normalizeBlueprint(state) {
             maxX: Number.NEGATIVE_INFINITY,
             maxY: Number.NEGATIVE_INFINITY,
         },
-        { w: canvasSizeWidth, h: canvasSizeHeight } = state.canvasSize,
         {
             top: canvasPaddingTop,
             right: canvasPaddingRight,
@@ -85,8 +84,8 @@ export default function normalizeBlueprint(state) {
         let { x: structurePositionX, y: structurePositionY } = structure.position;
 
         structure.position = {
-            x: Math.abs(minX - structurePositionX),
-            y: Math.abs(minY - structurePositionY),
+            x: Math.abs(minX - structurePositionX) + canvasPaddingLeft,
+            y: Math.abs(minY - structurePositionY) + canvasPaddingTop,
         };
 
         return structure;
@@ -105,7 +104,7 @@ export default function normalizeBlueprint(state) {
     };
 
     state.canvasSize = {
-        w: Math.abs(maxX - minX),
-        h: Math.abs(maxY - minY),
+        w: toPX(Math.max(reference["canvas-min-width"], state.gridSize.w + canvasPaddingLeft + canvasPaddingRight)),
+        h: toPX(state.gridSize.h + canvasPaddingTop + canvasPaddingBottom),
     };
 }

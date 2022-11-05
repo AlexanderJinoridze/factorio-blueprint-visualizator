@@ -1,398 +1,383 @@
 {
     "accumulator": {
         "collision-boundary-size": 2,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [6, 7],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [3, 3.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [56, 41],
-                "green-wire": [58, 55]
+                "red-wire": [28, 20.5],
+                "green-wire": [29, 27.5]
             }
         },
-        "shadow-size": [234, 106],
+        "shadow-size": [117, 53],
         "shadow-image-pos": 0,
-        "shadow-offset": [-58, -40]
+        "shadow-offset": [-29, -20]
     },
     "arithmetic-combinator": {
         "collision-boundary-size": [1, 2],
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
         "has-display": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "combinator-display-offset": [-14, -20],
+                "combinator-display-offset": [-7, -10],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-17, 31],
-                        "green-wire": [21, 31]
+                        "red-wire": [-8.5, 15.5],
+                        "green-wire": [10.5, 15.5]
                     },
                     "2": {
-                        "red-wire": [-17, -42],
-                        "green-wire": [20, -42]
+                        "red-wire": [-8.5, -21],
+                        "green-wire": [10, -21]
                     }
                 },
-                "shadow-size": [94, 84],
-                "shadow-image-pos": 234,
-                "shadow-offset": [-31, -28]
+                "shadow-size": [47, 42],
+                "shadow-image-pos": 117,
+                "shadow-offset": [-15.5, -14]
             },
             {
-                "combinator-display-offset": [-14, -32],
+                "combinator-display-offset": [-7, -16],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-48, -28],
-                        "green-wire": [-48, -1]
+                        "red-wire": [-24, -14],
+                        "green-wire": [-24, -0.5]
                     },
                     "2": {
-                        "red-wire": [46, -23],
-                        "green-wire": [46, 4]
+                        "red-wire": [23, -11.5],
+                        "green-wire": [23, 2]
                     }
                 },
-                "shadow-size": [127, 65],
-                "shadow-image-pos": 328,
-                "shadow-offset": [-46, -21]
+                "shadow-size": [63.5, 32.5],
+                "shadow-image-pos": 164,
+                "shadow-offset": [-23, -10.5]
             },
             {
-                "combinator-display-offset": [-14, -20],
+                "combinator-display-offset": [-7, -10],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [20, -41],
-                        "green-wire": [-18, -40]
+                        "red-wire": [10, -20.5],
+                        "green-wire": [-9, -20]
                     },
                     "2": {
-                        "red-wire": [20, 32],
-                        "green-wire": [-17, 32]
+                        "red-wire": [10, 16],
+                        "green-wire": [-8.5, 16]
                     }
                 },
-                "shadow-size": [94, 83],
-                "shadow-image-pos": 455,
-                "shadow-offset": [-32, -26]
+                "shadow-size": [47, 41.5],
+                "shadow-image-pos": 227.5,
+                "shadow-offset": [-16, -13]
             },
             {
-                "combinator-display-offset": [-14, -32],
+                "combinator-display-offset": [-7, -16],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [51, -2],
-                        "green-wire": [51, -29]
+                        "red-wire": [25.5, -1],
+                        "green-wire": [25.5, -14.5]
                     },
                     "2": {
-                        "red-wire": [-44, 3],
-                        "green-wire": [-44, -24]
+                        "red-wire": [-22, 1.5],
+                        "green-wire": [-22, -12]
                     }
                 },
-                "shadow-size": [126, 65],
-                "shadow-image-pos": 549,
-                "shadow-offset": [-34, -22]
+                "shadow-size": [63, 32.5],
+                "shadow-image-pos": 274.5,
+                "shadow-offset": [-17, -11]
             }
         ]
     },
     "artillery-turret": {
         "collision-boundary-size": 3,
-        "image-size": 576,
+        "image-size": 288,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "shadow-size": [374, 219],
-                "shadow-image-pos": 675,
-                "shadow-offset": [-103, -109]
+                "shadow-size": [187, 109.5],
+                "shadow-image-pos": 337.5,
+                "shadow-offset": [-51.5, -54.5]
             },
             {
-                "shadow-size": [580, 149],
-                "shadow-image-pos": 1049,
-                "shadow-offset": [-103, -44]
+                "shadow-size": [290, 74.5],
+                "shadow-image-pos": 524.5,
+                "shadow-offset": [-51.5, -22]
             },
             {
-                "shadow-size": [377, 246],
-                "shadow-image-pos": 1629,
-                "shadow-offset": [-102, -44]
+                "shadow-size": [188.5, 123],
+                "shadow-image-pos": 814.5,
+                "shadow-offset": [-51, -22]
             },
             {
-                "shadow-size": [364, 149],
-                "shadow-image-pos": 2006,
-                "shadow-offset": [-103, -44]
+                "shadow-size": [182, 74.5],
+                "shadow-image-pos": 1003,
+                "shadow-offset": [-51.5, -22]
             }
         ]
     },
     "assembling-machine-1": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
-        "shadow-size": [190, 165],
-        "shadow-image-pos": 2370,
-        "shadow-offset": [-78, -71]
+        "shadow-size": [95, 82.5],
+        "shadow-image-pos": 1185,
+        "shadow-offset": [-39, -35.5]
     },
     "assembling-machine-2": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
         "dir-count": 4,
-        "shadow-size": [193, 163],
-        "shadow-image-pos": 2560,
-        "shadow-offset": [-75, -72],
+        "shadow-size": [96.5, 81.5],
+        "shadow-image-pos": 1280,
+        "shadow-offset": [-37.5, -36],
         "dir-versions": [
             {
                 "pipe-connectors": [[0, -1]],
-                "shadow-size": [193, 203],
-                "shadow-image-pos": 2753,
-                "shadow-offset": [-76, -112]
+                "shadow-size": [96.5, 101.5],
+                "shadow-image-pos": 1376.5,
+                "shadow-offset": [-38, -56]
             },
             {
                 "pipe-connectors": [[1, 0]],
                 "pipe-outputs": [
                     {
                         "output-coord": [2, 0],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-size": [193, 163],
-                "shadow-image-pos": 2560,
-                "shadow-offset": [-75, -72]
+                "shadow-size": [96.5, 81.5],
+                "shadow-image-pos": 1280,
+                "shadow-offset": [-37.5, -36]
             },
             {
                 "pipe-connectors": [[0, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [0, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [193, 168],
-                "shadow-image-pos": 2946,
-                "shadow-offset": [-76, -72]
+                "shadow-size": [96.5, 84],
+                "shadow-image-pos": 1473,
+                "shadow-offset": [-38, -36]
             },
             {
                 "pipe-connectors": [[-1, 0]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, 0],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ],
-                "shadow-size": [193, 163],
-                "shadow-image-pos": 2560,
-                "shadow-offset": [-75, -72]
+                "shadow-size": [96.5, 81.5],
+                "shadow-image-pos": 1280,
+                "shadow-offset": [-37.5, -36]
             }
         ]
     },
     "assembling-machine-3": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
         "dir-count": 4,
-        "shadow-size": [231, 162],
-        "shadow-image-pos": 3139,
-        "shadow-offset": [-74, -73],
+        "shadow-size": [115.5, 81],
+        "shadow-image-pos": 1569.5,
+        "shadow-offset": [-37, -36.5],
         "dir-versions": [
             {
                 "pipe-connectors": [[0, -1]],
-                "shadow-size": [231, 201],
-                "shadow-image-pos": 3370,
-                "shadow-offset": [-75, -112]
+                "shadow-size": [115.5, 100.5],
+                "shadow-image-pos": 1685,
+                "shadow-offset": [-37.5, -56]
             },
             {
                 "pipe-connectors": [[1, 0]],
                 "pipe-outputs": [
                     {
                         "output-coord": [2, 0],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-size": [231, 162],
-                "shadow-image-pos": 3139,
-                "shadow-offset": [-74, -73]
+                "shadow-size": [115.5, 81],
+                "shadow-image-pos": 1569.5,
+                "shadow-offset": [-37, -36.5]
             },
             {
                 "pipe-connectors": [[0, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [0, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [231, 171],
-                "shadow-image-pos": 3601,
-                "shadow-offset": [-74, -73]
+                "shadow-size": [115.5, 85.5],
+                "shadow-image-pos": 1800.5,
+                "shadow-offset": [-37, -36.5]
             },
             {
                 "pipe-connectors": [[-1, 0]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, 0],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ],
-                "shadow-size": [253, 162],
-                "shadow-image-pos": 3832,
-                "shadow-offset": [-96, -73]
+                "shadow-size": [126.5, 81],
+                "shadow-image-pos": 1916,
+                "shadow-offset": [-48, -36.5]
             }
         ]
     },
     "beacon": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
+        "image-pos": [192, 0],
         "has-shadow": true,
-        "beacon-slot-down-offset": [-63, -2],
-        "beacon-slot-up-offset": [7, -55],
-        "shadow-size": [244, 176],
-        "shadow-image-pos": 4085,
-        "shadow-offset": [-97, -86]
+        "beacon-slot-down-offset": [-31.5, -1],
+        "beacon-slot-up-offset": [3.5, -27.5],
+        "shadow-size": [122, 88],
+        "shadow-image-pos": 2042.5,
+        "shadow-offset": [-48.5, -43]
     },
     "big-electric-pole": {
         "collision-boundary-size": 2,
-        "image-size": [192, 320],
-        "image-offset": [-96, -256],
+        "image-size": [96, 160],
+        "image-offset": [-48, -128],
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [1, -249],
-                        "red-wire": [60, -213],
-                        "green-wire": [-56, -213]
+                        "yellow-wire": [0.5, -124.5],
+                        "red-wire": [30, -106.5],
+                        "green-wire": [-28, -106.5]
                     }
                 },
-                "shadow-size": [374, 94],
-                "shadow-image-pos": 4329,
-                "shadow-offset": [-67, -45]
+                "shadow-size": [187, 47],
+                "shadow-image-pos": 2164.5,
+                "shadow-offset": [-33.5, -22.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [33, -238],
-                        "red-wire": [41, -186],
-                        "green-wire": [-41, -244]
+                        "yellow-wire": [16.5, -119],
+                        "red-wire": [20.5, -93],
+                        "green-wire": [-20.5, -122]
                     }
                 },
-                "shadow-size": [374, 94],
-                "shadow-image-pos": 4703,
-                "shadow-offset": [-67, -45]
+                "shadow-size": [187, 47],
+                "shadow-image-pos": 2351.5,
+                "shadow-offset": [-33.5, -22.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [47, -212],
-                        "red-wire": [1, -171],
-                        "green-wire": [2, -251]
+                        "yellow-wire": [23.5, -106],
+                        "red-wire": [0.5, -85.5],
+                        "green-wire": [1, -125.5]
                     }
                 },
-                "shadow-size": [374, 94],
-                "shadow-image-pos": 5077,
-                "shadow-offset": [-67, -45]
+                "shadow-size": [187, 47],
+                "shadow-image-pos": 2538.5,
+                "shadow-offset": [-33.5, -22.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [32, -190],
-                        "red-wire": [-40, -184],
-                        "green-wire": [41, -241]
+                        "yellow-wire": [16, -95],
+                        "red-wire": [-20, -92],
+                        "green-wire": [20.5, -120.5]
                     }
                 },
-                "shadow-size": [374, 94],
-                "shadow-image-pos": 5451,
-                "shadow-offset": [-67, -45]
+                "shadow-size": [187, 47],
+                "shadow-image-pos": 2725.5,
+                "shadow-offset": [-33.5, -22.5]
             }
         ]
     },
     "boiler": {
         "collision-boundary-size": [3, 2],
-        "image-size": 320,
+        "image-size": 160,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [0, -0.5],
-                    [1, 0.5],
-                    [-1, 0.5]
-                ],
+                "pipe-connectors": [[0, -0.5],[1, 0.5],[-1, 0.5]],
                 "pipe-outputs": [
                     {
                         "output-coord": [2, 0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [-2, 0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ],
-                "shadow-size": [274, 180],
-                "shadow-image-pos": 5825,
-                "shadow-offset": [-96, -80]
+                "shadow-size": [137, 90],
+                "shadow-image-pos": 2912.5,
+                "shadow-offset": [-48, -40]
             },
             {
-                "pipe-connectors": [
-                    [-0.5, -1],
-                    [0.5, 0],
-                    [-0.5, 1]
-                ],
+                "pipe-connectors": [[-0.5, -1],[0.5, 0],[-0.5, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [1.5, 0],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [-0.5, 2],
-                        "cover-pos": [256, 0]
-                    }
-                ],
-                "shadow-size": [186, 228],
-                "shadow-image-pos": 6099,
-                "shadow-offset": [-34, -112]
-            },
-            {
-                "pipe-connectors": [
-                    [-1, -0.5],
-                    [0, 0.5],
-                    [1, -0.5]
-                ],
-                "pipe-outputs": [
-                    {
-                        "output-coord": [-2, -0.5],
-                        "cover-pos": [384, 0]
-                    },
-                    {
-                        "output-coord": [0, 1.5],
-                        "cover-pos": [256, 0]
-                    },
-                    {
-                        "output-coord": [2, -0.5],
                         "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [311, 131],
-                "shadow-image-pos": 6285,
-                "shadow-offset": [-96, -40]
+                "shadow-size": [93, 114],
+                "shadow-image-pos": 3049.5,
+                "shadow-offset": [-17, -56]
             },
             {
-                "pipe-connectors": [
-                    [0.5, -1],
-                    [-0.5, 0],
-                    [0.5, 1]
+                "pipe-connectors": [[-1, -0.5],[0, 0.5],[1, -0.5]],
+                "pipe-outputs": [
+                    {
+                        "output-coord": [-2, -0.5],
+                        "cover-pos": [192, 0]
+                    },
+                    {
+                        "output-coord": [0, 1.5],
+                        "cover-pos": [128, 0]
+                    },
+                    {
+                        "output-coord": [2, -0.5],
+                        "cover-pos": [64, 0]
+                    }
                 ],
+                "shadow-size": [155.5, 65.5],
+                "shadow-image-pos": 3142.5,
+                "shadow-offset": [-48, -20]
+            },
+            {
+                "pipe-connectors": [[0.5, -1],[-0.5, 0],[0.5, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1.5, 0],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [0.5, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [206, 234],
-                "shadow-image-pos": 6596,
-                "shadow-offset": [-64, -112]
+                "shadow-size": [103, 117],
+                "shadow-image-pos": 3298,
+                "shadow-offset": [-32, -56]
             }
         ]
     },
     "burner-inserter": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
@@ -400,281 +385,261 @@
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [35, 8],
-                        "green-wire": [27, 17]
+                        "red-wire": [17.5, 4],
+                        "green-wire": [13.5, 8.5]
                     }
                 },
-                "shadow-size": [85, 65],
-                "shadow-image-pos": 13717,
-                "shadow-offset": [-29, -17]
+                "shadow-size": [42.5, 32.5],
+                "shadow-image-pos": 6858.5,
+                "shadow-offset": [-14.5, -8.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-9, -21],
-                        "green-wire": [-22, -17]
+                        "red-wire": [-4.5, -10.5],
+                        "green-wire": [-11, -8.5]
                     }
                 },
-                "shadow-size": [91, 52],
-                "shadow-image-pos": 13802,
-                "shadow-offset": [-36, -16]
+                "shadow-size": [45.5, 26],
+                "shadow-image-pos": 6901,
+                "shadow-offset": [-18, -8]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [28, -15],
-                        "green-wire": [35, -4]
+                        "red-wire": [14, -7.5],
+                        "green-wire": [17.5, -2]
                     }
                 },
-                "shadow-size": [84, 51],
-                "shadow-image-pos": 13893,
-                "shadow-offset": [-28, -9]
+                "shadow-size": [42, 25.5],
+                "shadow-image-pos": 6946.5,
+                "shadow-offset": [-14, -4.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [18, -20],
-                        "green-wire": [29, -15]
+                        "red-wire": [9, -10],
+                        "green-wire": [14.5, -7.5]
                     }
                 },
-                "shadow-size": [88, 43],
-                "shadow-image-pos": 13977,
-                "shadow-offset": [-34, -6]
+                "shadow-size": [44, 21.5],
+                "shadow-image-pos": 6988.5,
+                "shadow-offset": [-17, -3]
             }
         ]
     },
     "burner-mining-drill": {
         "collision-boundary-size": 2,
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "circuit-connector-pos": 640,
-                "circuit-connector-offset": [-53, -45],
+                "circuit-connector-pos": 320,
+                "circuit-connector-offset": [-26.5, -22.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-11, -4],
-                        "green-wire": [-20, 9]
+                        "red-wire": [-5.5, -2],
+                        "green-wire": [-10, 4.5]
                     }
                 },
-                "shadow-size": [177, 150],
-                "shadow-image-pos": 7031,
-                "shadow-offset": [-62, -76]
+                "shadow-size": [88.5, 75],
+                "shadow-image-pos": 3515.5,
+                "shadow-offset": [-31, -38]
             },
             {
-                "circuit-connector-pos": 640,
-                "circuit-connector-offset": [-53, -45],
+                "circuit-connector-pos": 320,
+                "circuit-connector-offset": [-26.5, -22.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-11, -4],
-                        "green-wire": [-20, 9]
+                        "red-wire": [-5.5, -2],
+                        "green-wire": [-10, 4.5]
                     }
                 },
-                "shadow-size": [185, 128],
-                "shadow-image-pos": 7208,
-                "shadow-offset": [-66, -62]
+                "shadow-size": [92.5, 64],
+                "shadow-image-pos": 3604,
+                "shadow-offset": [-33, -31]
             },
             {
-                "circuit-connector-pos": 640,
-                "circuit-connector-offset": [-53, -45],
+                "circuit-connector-pos": 320,
+                "circuit-connector-offset": [-26.5, -22.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-11, -4],
-                        "green-wire": [-20, 9]
+                        "red-wire": [-5.5, -2],
+                        "green-wire": [-10, 4.5]
                     }
                 },
-                "shadow-size": [174, 137],
-                "shadow-image-pos": 7393,
-                "shadow-offset": [-67, -62]
+                "shadow-size": [87, 68.5],
+                "shadow-image-pos": 3696.5,
+                "shadow-offset": [-33.5, -31]
             },
             {
-                "circuit-connector-pos": 640,
-                "circuit-connector-offset": [-53, -45],
+                "circuit-connector-pos": 320,
+                "circuit-connector-offset": [-26.5, -22.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-11, -4],
-                        "green-wire": [-20, 9]
+                        "red-wire": [-5.5, -2],
+                        "green-wire": [-10, 4.5]
                     }
                 },
-                "shadow-size": [176, 130],
-                "shadow-image-pos": 7567,
-                "shadow-offset": [-74, -62]
+                "shadow-size": [88, 65],
+                "shadow-image-pos": 3783.5,
+                "shadow-offset": [-37, -31]
             }
         ]
     },
     "centrifuge": {
         "collision-boundary-size": 3,
-        "image-size": 320,
+        "image-size": 160,
         "has-shadow": true,
-        "shadow-size": [346, 203],
-        "shadow-image-pos": 7743,
-        "shadow-offset": [-95, -94]
+        "shadow-size": [173, 101.5],
+        "shadow-image-pos": 3871.5,
+        "shadow-offset": [-47.5, -47]
     },
     "chemical-plant": {
         "collision-boundary-size": 3,
-        "image-size": 384,
+        "image-size": 192,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [-1, -1],
-                    [1, -1],
-                    [-1, 1],
-                    [1, 1]
-                ],
+                "pipe-connectors": [[-1, -1],[1, -1],[-1, 1],[1, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [1, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [282, 211],
-                "shadow-image-pos": 8089,
-                "shadow-offset": [-91, -111]
+                "shadow-size": [141, 105.5],
+                "shadow-image-pos": 4044.5,
+                "shadow-offset": [-45.5, -55.5]
             },
             {
-                "pipe-connectors": [
-                    [-1, -1],
-                    [1, -1],
-                    [-1, 1],
-                    [1, 1]
-                ],
+                "pipe-connectors": [[-1, -1],[1, -1],[-1, 1],[1, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, -1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [2, -1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [-2, 1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [2, 1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-size": [283, 171],
-                "shadow-image-pos": 8371,
-                "shadow-offset": [-98, -67]
+                "shadow-size": [141.5, 85.5],
+                "shadow-image-pos": 4185.5,
+                "shadow-offset": [-49, -33.5]
             },
             {
-                "pipe-connectors": [
-                    [-1, -1],
-                    [1, -1],
-                    [-1, 1],
-                    [1, 1]
-                ],
+                "pipe-connectors": [[-1, -1],[1, -1],[-1, 1],[1, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [1, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [242, 235],
-                "shadow-image-pos": 8654,
-                "shadow-offset": [-96, -111]
+                "shadow-size": [121, 117.5],
+                "shadow-image-pos": 4327,
+                "shadow-offset": [-48, -55.5]
             },
             {
-                "pipe-connectors": [
-                    [-1, -1],
-                    [1, -1],
-                    [-1, 1],
-                    [1, 1]
-                ],
+                "pipe-connectors": [[-1, -1],[1, -1],[-1, 1],[1, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, -1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [2, -1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [-2, 1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [2, 1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-size": [306, 179],
-                "shadow-image-pos": 8896,
-                "shadow-offset": [-96, -67]
+                "shadow-size": [153, 89.5],
+                "shadow-image-pos": 4448,
+                "shadow-offset": [-48, -33.5]
             }
         ]
     },
     "constant-combinator": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-16, -32],
-                        "green-wire": [15, -32]
+                        "red-wire": [-8, -16],
+                        "green-wire": [7.5, -16]
                     }
                 },
-                "shadow-size": [98, 66],
-                "shadow-image-pos": 9202,
-                "shadow-offset": [-31, -21]
+                "shadow-size": [49, 33],
+                "shadow-image-pos": 4601,
+                "shadow-offset": [-15.5, -10.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [32, -31],
-                        "green-wire": [32, -4]
+                        "red-wire": [16, -15.5],
+                        "green-wire": [16, -2]
                     }
                 },
-                "shadow-size": [98, 66],
-                "shadow-image-pos": 9300,
-                "shadow-offset": [-31, -21]
+                "shadow-size": [49, 33],
+                "shadow-image-pos": 4650,
+                "shadow-offset": [-15.5, -10.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [19, 15],
-                        "green-wire": [-12, 15]
+                        "red-wire": [9.5, 7.5],
+                        "green-wire": [-6, 7.5]
                     }
                 },
-                "shadow-size": [98, 66],
-                "shadow-image-pos": 9398,
-                "shadow-offset": [-31, -21]
+                "shadow-size": [49, 33],
+                "shadow-image-pos": 4699,
+                "shadow-offset": [-15.5, -10.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-30, 1],
-                        "green-wire": [-30, -26]
+                        "red-wire": [-15, 0.5],
+                        "green-wire": [-15, -13]
                     }
                 },
-                "shadow-size": [98, 66],
-                "shadow-image-pos": 9496,
-                "shadow-offset": [-31, -21]
+                "shadow-size": [49, 33],
+                "shadow-image-pos": 4748,
+                "shadow-offset": [-15.5, -10.5]
             }
         ]
     },
     "curved-rail": {
         "collision-boundary-size": [4, 8],
-        "image-size": 640,
+        "image-size": 320,
         "dir-count": 8,
         "dir-versions": [
             {
@@ -1009,181 +974,175 @@
     },
     "decider-combinator": {
         "collision-boundary-size": [1, 2],
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
         "has-display": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "combinator-display-offset": [-14, -20],
+                "combinator-display-offset": [-7, -10],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-16, 31],
-                        "green-wire": [19, 31]
+                        "red-wire": [-8, 15.5],
+                        "green-wire": [9.5, 15.5]
                     },
                     "2": {
-                        "red-wire": [-17, -41],
-                        "green-wire": [20, -41]
+                        "red-wire": [-8.5, -20.5],
+                        "green-wire": [10, -20.5]
                     }
                 },
-                "shadow-size": [96, 83],
-                "shadow-image-pos": 9594,
-                "shadow-offset": [-31, -22]
+                "shadow-size": [48, 41.5],
+                "shadow-image-pos": 4797,
+                "shadow-offset": [-15.5, -11]
             },
             {
-                "combinator-display-offset": [-15, -38],
+                "combinator-display-offset": [-7.5, -19],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-47, -35],
-                        "green-wire": [-46, -6]
+                        "red-wire": [-23.5, -17.5],
+                        "green-wire": [-23, -3]
                     },
                     "2": {
-                        "red-wire": [45, -34],
-                        "green-wire": [45, -5]
+                        "red-wire": [22.5, -17],
+                        "green-wire": [22.5, -2.5]
                     }
                 },
-                "shadow-size": [134, 66],
-                "shadow-image-pos": 9690,
-                "shadow-offset": [-53, -27]
+                "shadow-size": [67, 33],
+                "shadow-image-pos": 4845,
+                "shadow-offset": [-26.5, -13.5]
             },
             {
-                "combinator-display-offset": [-14, -19],
+                "combinator-display-offset": [-7, -9.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [20, -36],
-                        "green-wire": [-16, -36]
+                        "red-wire": [10, -18],
+                        "green-wire": [-8, -18]
                     },
                     "2": {
-                        "red-wire": [20, 38],
-                        "green-wire": [-18, 38]
+                        "red-wire": [10, 19],
+                        "green-wire": [-9, 19]
                     }
                 },
-                "shadow-size": [94, 83],
-                "shadow-image-pos": 9824,
-                "shadow-offset": [-31, -17]
+                "shadow-size": [47, 41.5],
+                "shadow-image-pos": 4912,
+                "shadow-offset": [-15.5, -8.5]
             },
             {
-                "combinator-display-offset": [-14, -38],
+                "combinator-display-offset": [-7, -19],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [49, -7],
-                        "green-wire": [49, -35]
+                        "red-wire": [24.5, -3.5],
+                        "green-wire": [24.5, -17.5]
                     },
                     "2": {
-                        "red-wire": [-41, -5],
-                        "green-wire": [-42, -31]
+                        "red-wire": [-20.5, -2.5],
+                        "green-wire": [-21, -15.5]
                     }
                 },
-                "shadow-size": [126, 65],
-                "shadow-image-pos": 9918,
-                "shadow-offset": [-37, -30]
+                "shadow-size": [63, 32.5],
+                "shadow-image-pos": 4959,
+                "shadow-offset": [-18.5, -15]
             }
         ]
     },
     "electric-furnace": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "shadow-size": [227, 171],
-        "shadow-image-pos": 10044,
-        "shadow-offset": [-90, -69]
+        "shadow-size": [113.5, 85.5],
+        "shadow-image-pos": 5022,
+        "shadow-offset": [-45, -34.5]
     },
     "electric-mining-drill": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "circuit-connector-pos": 256,
-                "circuit-connector-offset": [-119, -112],
+                "circuit-connector-pos": 128,
+                "circuit-connector-offset": [-59.5, -56],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-85, -104],
-                        "green-wire": [-71, -104]
+                        "red-wire": [-42.5, -52],
+                        "green-wire": [-35.5, -52]
                     }
                 },
-                "shadow-size": [244, 204],
-                "shadow-image-pos": 10271,
-                "shadow-offset": [-95, -108]
+                "shadow-size": [122, 102],
+                "shadow-image-pos": 5135.5,
+                "shadow-offset": [-47.5, -54]
             },
             {
-                "circuit-connector-pos": 128,
-                "circuit-connector-offset": [37, 30],
+                "circuit-connector-pos": 64,
+                "circuit-connector-offset": [18.5, 15],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [86, 53],
-                        "green-wire": [88, 66]
+                        "red-wire": [43, 26.5],
+                        "green-wire": [44, 33]
                     }
                 },
-                "shadow-size": [247, 182],
-                "shadow-image-pos": 10515,
-                "shadow-offset": [-92, -89]
+                "shadow-size": [123.5, 91],
+                "shadow-image-pos": 5257.5,
+                "shadow-offset": [-46, -44.5]
             },
             {
                 "circuit-connector-pos": 0,
-                "circuit-connector-offset": [-101, 18],
+                "circuit-connector-offset": [-50.5, 9],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-72, 59],
-                        "green-wire": [-86, 59]
+                        "red-wire": [-36, 29.5],
+                        "green-wire": [-43, 29.5]
                     }
                 },
-                "shadow-size": [245, 204],
-                "shadow-image-pos": 10762,
-                "shadow-offset": [-95, -98]
+                "shadow-size": [122.5, 102],
+                "shadow-image-pos": 5381,
+                "shadow-offset": [-47.5, -49]
             },
             {
-                "circuit-connector-pos": 384,
-                "circuit-connector-offset": [-99, 44],
+                "circuit-connector-pos": 192,
+                "circuit-connector-offset": [-49.5, 22],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-89, 67],
-                        "green-wire": [-86, 53]
+                        "red-wire": [-44.5, 33.5],
+                        "green-wire": [-43, 26.5]
                     }
                 },
-                "shadow-size": [263, 182],
-                "shadow-image-pos": 11007,
-                "shadow-offset": [-108, -91]
+                "shadow-size": [131.5, 91],
+                "shadow-image-pos": 5503.5,
+                "shadow-offset": [-54, -45.5]
             }
         ]
     },
     "express-splitter": {
         "collision-boundary-size": [2, 1],
-        "image-size": 192,
+        "image-size": 96,
         "dir-count": 4,
         "dir-versions": [
             {
-                "belt-connectors": [
-                    [-0.5, 0],
-                    [0.5, 0]
-                ],
+                "belt-connectors": [[-0.5, 0],[0.5, 0]],
                 "belt-outputs": [
                     {
                         "output-coord": [-0.5, -1],
-                        "cover-pos": [0, 128]
+                        "cover-pos": [0, 64]
                     },
                     {
                         "output-coord": [0.5, -1],
-                        "cover-pos": [0, 128]
+                        "cover-pos": [0, 64]
                     },
                     {
                         "output-coord": [-0.5, 1],
-                        "cover-pos": [128, 128]
+                        "cover-pos": [64, 64]
                     },
                     {
                         "output-coord": [0.5, 1],
-                        "cover-pos": [128, 128]
+                        "cover-pos": [64, 64]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [0, -0.5],
-                    [0, 0.5]
-                ],
+                "belt-connectors": [[0, -0.5],[0, 0.5]],
                 "belt-outputs": [
                     {
                         "output-coord": [-1, -0.5],
@@ -1195,59 +1154,53 @@
                     },
                     {
                         "output-coord": [1, -0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [1, 0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [-0.5, 0],
-                    [0.5, 0]
-                ],
+                "belt-connectors": [[-0.5, 0],[0.5, 0]],
                 "belt-outputs": [
                     {
                         "output-coord": [-0.5, -1],
-                        "cover-pos": [384, 128]
+                        "cover-pos": [192, 64]
                     },
                     {
                         "output-coord": [0.5, -1],
-                        "cover-pos": [384, 128]
+                        "cover-pos": [192, 64]
                     },
                     {
                         "output-coord": [-0.5, 1],
-                        "cover-pos": [256, 128]
+                        "cover-pos": [128, 64]
                     },
                     {
                         "output-coord": [0.5, 1],
-                        "cover-pos": [256, 128]
+                        "cover-pos": [128, 64]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [0, -0.5],
-                    [0, 0.5]
-                ],
+                "belt-connectors": [[0, -0.5],[0, 0.5]],
                 "belt-outputs": [
                     {
                         "output-coord": [-1, -0.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [-1, 0.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [1, -0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [1, 0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ]
             }
@@ -1255,13 +1208,13 @@
     },
     "express-transport-belt": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-circuit-connector": true,
         "dir-count": 4
     },
     "express-underground-belt": {
         "collision-boundary-size": 1,
-        "image-size": 192,
+        "image-size": 96,
         "dir-count": 4,
         "dir-versions": [
             {
@@ -1269,7 +1222,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, 0.5],
-                            "cover-pos": [128, 128]
+                            "cover-pos": [64, 64]
                         }
                     ]
                 },
@@ -1277,7 +1230,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, -0.5],
-                            "cover-pos": [0, 128]
+                            "cover-pos": [0, 64]
                         }
                     ]
                 }
@@ -1295,7 +1248,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0.5, 0],
-                            "cover-pos": [128, 0]
+                            "cover-pos": [64, 0]
                         }
                     ]
                 }
@@ -1305,7 +1258,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, -0.5],
-                            "cover-pos": [384, 128]
+                            "cover-pos": [192, 64]
                         }
                     ]
                 },
@@ -1313,7 +1266,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, 0.5],
-                            "cover-pos": [256, 128]
+                            "cover-pos": [128, 64]
                         }
                     ]
                 }
@@ -1323,7 +1276,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0.5, 0],
-                            "cover-pos": [384, 0]
+                            "cover-pos": [192, 0]
                         }
                     ]
                 },
@@ -1331,7 +1284,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [-0.5, 0],
-                            "cover-pos": [256, 0]
+                            "cover-pos": [128, 0]
                         }
                     ]
                 }
@@ -1340,7 +1293,7 @@
     },
     "fast-inserter": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
@@ -1348,83 +1301,77 @@
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [35, 8],
-                        "green-wire": [27, 17]
+                        "red-wire": [17.5, 4],
+                        "green-wire": [13.5, 8.5]
                     }
                 },
-                "shadow-size": [85, 65],
-                "shadow-image-pos": 13717,
-                "shadow-offset": [-29, -17]
+                "shadow-size": [42.5, 32.5],
+                "shadow-image-pos": 6858.5,
+                "shadow-offset": [-14.5, -8.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-9, -21],
-                        "green-wire": [-22, -17]
+                        "red-wire": [-4.5, -10.5],
+                        "green-wire": [-11, -8.5]
                     }
                 },
-                "shadow-size": [91, 52],
-                "shadow-image-pos": 13802,
-                "shadow-offset": [-36, -16]
+                "shadow-size": [45.5, 26],
+                "shadow-image-pos": 6901,
+                "shadow-offset": [-18, -8]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [28, -15],
-                        "green-wire": [35, -4]
+                        "red-wire": [14, -7.5],
+                        "green-wire": [17.5, -2]
                     }
                 },
-                "shadow-size": [84, 51],
-                "shadow-image-pos": 13893,
-                "shadow-offset": [-28, -9]
+                "shadow-size": [42, 25.5],
+                "shadow-image-pos": 6946.5,
+                "shadow-offset": [-14, -4.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [18, -20],
-                        "green-wire": [29, -15]
+                        "red-wire": [9, -10],
+                        "green-wire": [14.5, -7.5]
                     }
                 },
-                "shadow-size": [88, 43],
-                "shadow-image-pos": 13977,
-                "shadow-offset": [-34, -6]
+                "shadow-size": [44, 21.5],
+                "shadow-image-pos": 6988.5,
+                "shadow-offset": [-17, -3]
             }
         ]
     },
     "fast-splitter": {
         "collision-boundary-size": [2, 1],
-        "image-size": 192,
+        "image-size": 96,
         "dir-count": 4,
         "dir-versions": [
             {
-                "belt-connectors": [
-                    [-0.5, 0],
-                    [0.5, 0]
-                ],
+                "belt-connectors": [[-0.5, 0],[0.5, 0]],
                 "belt-outputs": [
                     {
                         "output-coord": [-0.5, -1],
-                        "cover-pos": [0, 128]
+                        "cover-pos": [0, 64]
                     },
                     {
                         "output-coord": [0.5, -1],
-                        "cover-pos": [0, 128]
+                        "cover-pos": [0, 64]
                     },
                     {
                         "output-coord": [-0.5, 1],
-                        "cover-pos": [128, 128]
+                        "cover-pos": [64, 64]
                     },
                     {
                         "output-coord": [0.5, 1],
-                        "cover-pos": [128, 128]
+                        "cover-pos": [64, 64]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [0, -0.5],
-                    [0, 0.5]
-                ],
+                "belt-connectors": [[0, -0.5],[0, 0.5]],
                 "belt-outputs": [
                     {
                         "output-coord": [-1, -0.5],
@@ -1436,59 +1383,53 @@
                     },
                     {
                         "output-coord": [1, -0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [1, 0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [-0.5, 0],
-                    [0.5, 0]
-                ],
+                "belt-connectors": [[-0.5, 0],[0.5, 0]],
                 "belt-outputs": [
                     {
                         "output-coord": [-0.5, -1],
-                        "cover-pos": [384, 128]
+                        "cover-pos": [192, 64]
                     },
                     {
                         "output-coord": [0.5, -1],
-                        "cover-pos": [384, 128]
+                        "cover-pos": [192, 64]
                     },
                     {
                         "output-coord": [-0.5, 1],
-                        "cover-pos": [256, 128]
+                        "cover-pos": [128, 64]
                     },
                     {
                         "output-coord": [0.5, 1],
-                        "cover-pos": [256, 128]
+                        "cover-pos": [128, 64]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [0, -0.5],
-                    [0, 0.5]
-                ],
+                "belt-connectors": [[0, -0.5],[0, 0.5]],
                 "belt-outputs": [
                     {
                         "output-coord": [-1, -0.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [-1, 0.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [1, -0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [1, 0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ]
             }
@@ -1496,13 +1437,13 @@
     },
     "fast-transport-belt": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-circuit-connector": true,
         "dir-count": 4
     },
     "fast-underground-belt": {
         "collision-boundary-size": 1,
-        "image-size": 192,
+        "image-size": 96,
         "dir-count": 4,
         "dir-versions": [
             {
@@ -1510,7 +1451,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, 0.5],
-                            "cover-pos": [128, 128]
+                            "cover-pos": [64, 64]
                         }
                     ]
                 },
@@ -1518,7 +1459,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, -0.5],
-                            "cover-pos": [0, 128]
+                            "cover-pos": [0, 64]
                         }
                     ]
                 }
@@ -1536,7 +1477,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0.5, 0],
-                            "cover-pos": [128, 0]
+                            "cover-pos": [64, 0]
                         }
                     ]
                 }
@@ -1546,7 +1487,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, -0.5],
-                            "cover-pos": [384, 128]
+                            "cover-pos": [192, 64]
                         }
                     ]
                 },
@@ -1554,7 +1495,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, 0.5],
-                            "cover-pos": [256, 128]
+                            "cover-pos": [128, 64]
                         }
                     ]
                 }
@@ -1564,7 +1505,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0.5, 0],
-                            "cover-pos": [384, 0]
+                            "cover-pos": [192, 0]
                         }
                     ]
                 },
@@ -1572,7 +1513,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [-0.5, 0],
-                            "cover-pos": [256, 0]
+                            "cover-pos": [128, 0]
                         }
                     ]
                 }
@@ -1581,7 +1522,7 @@
     },
     "filter-inserter": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
@@ -1589,181 +1530,165 @@
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [35, 8],
-                        "green-wire": [27, 17]
+                        "red-wire": [17.5, 4],
+                        "green-wire": [13.5, 8.5]
                     }
                 },
-                "shadow-size": [85, 65],
-                "shadow-image-pos": 13717,
-                "shadow-offset": [-29, -17]
+                "shadow-size": [42.5, 32.5],
+                "shadow-image-pos": 6858.5,
+                "shadow-offset": [-14.5, -8.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-9, -21],
-                        "green-wire": [-22, -17]
+                        "red-wire": [-4.5, -10.5],
+                        "green-wire": [-11, -8.5]
                     }
                 },
-                "shadow-size": [91, 52],
-                "shadow-image-pos": 13802,
-                "shadow-offset": [-36, -16]
+                "shadow-size": [45.5, 26],
+                "shadow-image-pos": 6901,
+                "shadow-offset": [-18, -8]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [28, -15],
-                        "green-wire": [35, -4]
+                        "red-wire": [14, -7.5],
+                        "green-wire": [17.5, -2]
                     }
                 },
-                "shadow-size": [84, 51],
-                "shadow-image-pos": 13893,
-                "shadow-offset": [-28, -9]
+                "shadow-size": [42, 25.5],
+                "shadow-image-pos": 6946.5,
+                "shadow-offset": [-14, -4.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [18, -20],
-                        "green-wire": [29, -15]
+                        "red-wire": [9, -10],
+                        "green-wire": [14.5, -7.5]
                     }
                 },
-                "shadow-size": [88, 43],
-                "shadow-image-pos": 13977,
-                "shadow-offset": [-34, -6]
+                "shadow-size": [44, 21.5],
+                "shadow-image-pos": 6988.5,
+                "shadow-offset": [-17, -3]
             }
         ]
     },
     "flamethrower-turret": {
         "collision-boundary-size": [2, 3],
-        "image-size": 320,
+        "image-size": 160,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [-0.5, 1],
-                    [0.5, 1]
-                ],
+                "pipe-connectors": [[-0.5, 1],[0.5, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1.5, 1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [1.5, 1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-size": [167, 172],
-                "shadow-image-pos": 11270,
-                "shadow-offset": [-64, -66]
+                "shadow-size": [83.5, 86],
+                "shadow-image-pos": 5635,
+                "shadow-offset": [-32, -33]
             },
             {
-                "pipe-connectors": [
-                    [-1, -0.5],
-                    [-1, 0.5]
-                ],
+                "pipe-connectors": [[-1, -0.5],[-1, 0.5]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1, 1.5],
-                        "cover-pos": [256, 0]
-                    }
-                ],
-                "shadow-size": [260, 133],
-                "shadow-image-pos": 11437,
-                "shadow-offset": [-68, -69]
-            },
-            {
-                "pipe-connectors": [
-                    [-0.5, -1],
-                    [0.5, -1]
-                ],
-                "pipe-outputs": [
-                    {
-                        "output-coord": [-1.5, -1],
-                        "cover-pos": [384, 0]
-                    },
-                    {
-                        "output-coord": [1.5, -1],
                         "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [176, 156],
-                "shadow-image-pos": 11697,
-                "shadow-offset": [-64, -65]
+                "shadow-size": [130, 66.5],
+                "shadow-image-pos": 5718.5,
+                "shadow-offset": [-34, -34.5]
             },
             {
-                "pipe-connectors": [
-                    [1, -0.5],
-                    [1, 0.5]
+                "pipe-connectors": [[-0.5, -1],[0.5, -1]],
+                "pipe-outputs": [
+                    {
+                        "output-coord": [-1.5, -1],
+                        "cover-pos": [192, 0]
+                    },
+                    {
+                        "output-coord": [1.5, -1],
+                        "cover-pos": [64, 0]
+                    }
                 ],
+                "shadow-size": [88, 78],
+                "shadow-image-pos": 5848.5,
+                "shadow-offset": [-32, -32.5]
+            },
+            {
+                "pipe-connectors": [[1, -0.5],[1, 0.5]],
                 "pipe-outputs": [
                     {
                         "output-coord": [1, 1.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [204, 136],
-                "shadow-image-pos": 11873,
-                "shadow-offset": [-71, -72]
+                "shadow-size": [102, 68],
+                "shadow-image-pos": 5936.5,
+                "shadow-offset": [-35.5, -36]
             }
         ]
     },
     "gate": {
         "collision-boundary-size": 1,
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
         "dir-count": 2,
-        "shadow-image-pos": 12077
+        "shadow-image-pos": 6038.5
     },
     "gun-turret": {
         "collision-boundary-size": 2,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "shadow-size": [250, 124],
-                "shadow-image-pos": 12461,
-                "shadow-offset": [-86, -56]
+                "shadow-size": [125, 62],
+                "shadow-image-pos": 6230.5,
+                "shadow-offset": [-43, -28]
             },
             {
-                "shadow-size": [250, 124],
-                "shadow-image-pos": 12711,
-                "shadow-offset": [-86, -56]
+                "shadow-size": [125, 62],
+                "shadow-image-pos": 6355.5,
+                "shadow-offset": [-43, -28]
             },
             {
-                "shadow-size": [250, 124],
-                "shadow-image-pos": 12961,
-                "shadow-offset": [-86, -56]
+                "shadow-size": [125, 62],
+                "shadow-image-pos": 6480.5,
+                "shadow-offset": [-43, -28]
             },
             {
-                "shadow-size": [250, 124],
-                "shadow-image-pos": 13211,
-                "shadow-offset": [-86, -56]
+                "shadow-size": [125, 62],
+                "shadow-image-pos": 6605.5,
+                "shadow-offset": [-43, -28]
             }
         ]
     },
     "heat-exchanger": {
         "collision-boundary-size": [3, 2],
-        "image-size": 320,
+        "image-size": 160,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [0, -0.5],
-                    [1, 0.5],
-                    [-1, 0.5]
-                ],
+                "pipe-connectors": [[0, -0.5],[1, 0.5],[-1, 0.5]],
                 "heat-pipe-connectors": [[0, 0.5]],
                 "pipe-outputs": [
                     {
                         "output-coord": [2, 0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [-2, 0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ],
                 "heat-pipe-outputs": [
@@ -1772,100 +1697,88 @@
                         "cover-pos": [0, 0]
                     }
                 ],
-                "shadow-size": [274, 180],
-                "shadow-image-pos": 5825,
-                "shadow-offset": [-96, -80]
+                "shadow-size": [137, 90],
+                "shadow-image-pos": 2912.5,
+                "shadow-offset": [-48, -40]
             },
             {
-                "pipe-connectors": [
-                    [-0.5, -1],
-                    [0.5, 0],
-                    [-0.5, 1]
-                ],
+                "pipe-connectors": [[-0.5, -1],[0.5, 0],[-0.5, 1]],
                 "heat-pipe-connectors": [[-0.5, 0]],
                 "pipe-outputs": [
                     {
                         "output-coord": [1.5, 0],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [-0.5, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
                 "heat-pipe-outputs": [
                     {
                         "output-coord": [-1.5, 0],
-                        "cover-pos": [64, 0]
+                        "cover-pos": [32, 0]
                     }
                 ],
-                "shadow-size": [229, 228],
-                "shadow-image-pos": 6802,
-                "shadow-offset": [-77, -112]
+                "shadow-size": [114.5, 114],
+                "shadow-image-pos": 3401,
+                "shadow-offset": [-38.5, -56]
             },
             {
-                "pipe-connectors": [
-                    [-1, -0.5],
-                    [0, 0.5],
-                    [1, -0.5]
-                ],
+                "pipe-connectors": [[-1, -0.5],[0, 0.5],[1, -0.5]],
                 "heat-pipe-connectors": [[0, -0.5]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, -0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [0, 1.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [2, -0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-size": [311, 131],
-                "shadow-image-pos": 6285,
-                "shadow-offset": [-96, -40]
+                "shadow-size": [155.5, 65.5],
+                "shadow-image-pos": 3142.5,
+                "shadow-offset": [-48, -20]
             },
             {
-                "pipe-connectors": [
-                    [0.5, -1],
-                    [-0.5, 0],
-                    [0.5, 1]
-                ],
+                "pipe-connectors": [[0.5, -1],[-0.5, 0],[0.5, 1]],
                 "heat-pipe-connectors": [[0.5, 0]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1.5, 0],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [0.5, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
                 "heat-pipe-outputs": [
                     {
                         "output-coord": [1.5, 0],
-                        "cover-pos": [192, 0]
+                        "cover-pos": [96, 0]
                     }
                 ],
-                "shadow-size": [206, 234],
-                "shadow-image-pos": 6596,
-                "shadow-offset": [-64, -112]
+                "shadow-size": [103, 117],
+                "shadow-image-pos": 3298,
+                "shadow-offset": [-32, -56]
             }
         ]
     },
     "heat-pipe": {
         "collision-boundary-size": 1,
-        "image-size": 64,
+        "image-size": 32,
         "has-shadow": true,
-        "shadow-image-pos": 13461
+        "shadow-image-pos": 6730.5
     },
     "inserter": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
@@ -1873,194 +1786,194 @@
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [35, 8],
-                        "green-wire": [27, 17]
+                        "red-wire": [17.5, 4],
+                        "green-wire": [13.5, 8.5]
                     }
                 },
-                "shadow-size": [85, 65],
-                "shadow-image-pos": 13717,
-                "shadow-offset": [-29, -17]
+                "shadow-size": [42.5, 32.5],
+                "shadow-image-pos": 6858.5,
+                "shadow-offset": [-14.5, -8.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-9, -21],
-                        "green-wire": [-22, -17]
+                        "red-wire": [-4.5, -10.5],
+                        "green-wire": [-11, -8.5]
                     }
                 },
-                "shadow-size": [91, 52],
-                "shadow-image-pos": 13802,
-                "shadow-offset": [-36, -16]
+                "shadow-size": [45.5, 26],
+                "shadow-image-pos": 6901,
+                "shadow-offset": [-18, -8]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [28, -15],
-                        "green-wire": [35, -4]
+                        "red-wire": [14, -7.5],
+                        "green-wire": [17.5, -2]
                     }
                 },
-                "shadow-size": [84, 51],
-                "shadow-image-pos": 13893,
-                "shadow-offset": [-28, -9]
+                "shadow-size": [42, 25.5],
+                "shadow-image-pos": 6946.5,
+                "shadow-offset": [-14, -4.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [18, -20],
-                        "green-wire": [29, -15]
+                        "red-wire": [9, -10],
+                        "green-wire": [14.5, -7.5]
                     }
                 },
-                "shadow-size": [88, 43],
-                "shadow-image-pos": 13977,
-                "shadow-offset": [-34, -6]
+                "shadow-size": [44, 21.5],
+                "shadow-image-pos": 6988.5,
+                "shadow-offset": [-17, -3]
             }
         ]
     },
     "iron-chest": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-25, -19],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-12.5, -9.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [25, 15],
-                "green-wire": [27, 29]
+                "red-wire": [12.5, 7.5],
+                "green-wire": [13.5, 14.5]
             }
         },
-        "shadow-size": [110, 50],
-        "shadow-image-pos": 14065,
-        "shadow-offset": [-34, -12]
+        "shadow-size": [55, 25],
+        "shadow-image-pos": 7032.5,
+        "shadow-offset": [-17, -6]
     },
     "lab": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
-        "shadow-size": [243, 136],
-        "shadow-image-pos": 14175,
-        "shadow-offset": [-94, -45]
+        "shadow-size": [121.5, 68],
+        "shadow-image-pos": 7087.5,
+        "shadow-offset": [-47, -22.5]
     },
     "land-mine": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "laser-turret": {
         "collision-boundary-size": 2,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "shadow-size": [239, 96],
-                "shadow-image-pos": 14418,
-                "shadow-offset": [-53, -42]
+                "shadow-size": [119.5, 48],
+                "shadow-image-pos": 7209,
+                "shadow-offset": [-26.5, -21]
             },
             {
-                "shadow-size": [239, 96],
-                "shadow-image-pos": 14657,
-                "shadow-offset": [-53, -42]
+                "shadow-size": [119.5, 48],
+                "shadow-image-pos": 7328.5,
+                "shadow-offset": [-26.5, -21]
             },
             {
-                "shadow-size": [239, 96],
-                "shadow-image-pos": 14896,
-                "shadow-offset": [-53, -42]
+                "shadow-size": [119.5, 48],
+                "shadow-image-pos": 7448,
+                "shadow-offset": [-26.5, -21]
             },
             {
-                "shadow-size": [238, 96],
-                "shadow-image-pos": 15135,
-                "shadow-offset": [-53, -42]
+                "shadow-size": [119, 48],
+                "shadow-image-pos": 7567.5,
+                "shadow-offset": [-26.5, -21]
             }
         ]
     },
     "logistic-chest-active-provider": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-25, -19],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-12.5, -9.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [25, 15],
-                "green-wire": [27, 29]
+                "red-wire": [12.5, 7.5],
+                "green-wire": [13.5, 14.5]
             }
         },
-        "shadow-size": [113, 47],
-        "shadow-image-pos": 15373,
-        "shadow-offset": [-31, -13]
+        "shadow-size": [56.5, 23.5],
+        "shadow-image-pos": 7686.5,
+        "shadow-offset": [-15.5, -6.5]
     },
     "logistic-chest-buffer": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-25, -19],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-12.5, -9.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [25, 15],
-                "green-wire": [27, 29]
+                "red-wire": [12.5, 7.5],
+                "green-wire": [13.5, 14.5]
             }
         },
-        "shadow-size": [113, 47],
-        "shadow-image-pos": 15373,
-        "shadow-offset": [-31, -13]
+        "shadow-size": [56.5, 23.5],
+        "shadow-image-pos": 7686.5,
+        "shadow-offset": [-15.5, -6.5]
     },
     "logistic-chest-passive-provider": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-25, -19],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-12.5, -9.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [25, 15],
-                "green-wire": [27, 29]
+                "red-wire": [12.5, 7.5],
+                "green-wire": [13.5, 14.5]
             }
         },
-        "shadow-size": [113, 47],
-        "shadow-image-pos": 15373,
-        "shadow-offset": [-31, -13]
+        "shadow-size": [56.5, 23.5],
+        "shadow-image-pos": 7686.5,
+        "shadow-offset": [-15.5, -6.5]
     },
     "logistic-chest-requester": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-25, -19],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-12.5, -9.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [25, 15],
-                "green-wire": [27, 29]
+                "red-wire": [12.5, 7.5],
+                "green-wire": [13.5, 14.5]
             }
         },
-        "shadow-size": [113, 47],
-        "shadow-image-pos": 15373,
-        "shadow-offset": [-31, -13]
+        "shadow-size": [56.5, 23.5],
+        "shadow-image-pos": 7686.5,
+        "shadow-offset": [-15.5, -6.5]
     },
     "logistic-chest-storage": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-25, -19],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-12.5, -9.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [25, 15],
-                "green-wire": [27, 29]
+                "red-wire": [12.5, 7.5],
+                "green-wire": [13.5, 14.5]
             }
         },
-        "shadow-size": [113, 47],
-        "shadow-image-pos": 15373,
-        "shadow-offset": [-31, -13]
+        "shadow-size": [56.5, 23.5],
+        "shadow-image-pos": 7686.5,
+        "shadow-offset": [-15.5, -6.5]
     },
     "long-handed-inserter": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
@@ -2068,757 +1981,712 @@
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [35, 8],
-                        "green-wire": [27, 17]
+                        "red-wire": [17.5, 4],
+                        "green-wire": [13.5, 8.5]
                     }
                 },
-                "shadow-size": [85, 65],
-                "shadow-image-pos": 13717,
-                "shadow-offset": [-29, -17]
+                "shadow-size": [42.5, 32.5],
+                "shadow-image-pos": 6858.5,
+                "shadow-offset": [-14.5, -8.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-9, -21],
-                        "green-wire": [-22, -17]
+                        "red-wire": [-4.5, -10.5],
+                        "green-wire": [-11, -8.5]
                     }
                 },
-                "shadow-size": [91, 52],
-                "shadow-image-pos": 13802,
-                "shadow-offset": [-36, -16]
+                "shadow-size": [45.5, 26],
+                "shadow-image-pos": 6901,
+                "shadow-offset": [-18, -8]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [28, -15],
-                        "green-wire": [35, -4]
+                        "red-wire": [14, -7.5],
+                        "green-wire": [17.5, -2]
                     }
                 },
-                "shadow-size": [84, 51],
-                "shadow-image-pos": 13893,
-                "shadow-offset": [-28, -9]
+                "shadow-size": [42, 25.5],
+                "shadow-image-pos": 6946.5,
+                "shadow-offset": [-14, -4.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [18, -20],
-                        "green-wire": [29, -15]
+                        "red-wire": [9, -10],
+                        "green-wire": [14.5, -7.5]
                     }
                 },
-                "shadow-size": [88, 43],
-                "shadow-image-pos": 13977,
-                "shadow-offset": [-34, -6]
+                "shadow-size": [44, 21.5],
+                "shadow-image-pos": 6988.5,
+                "shadow-offset": [-17, -3]
             }
         ]
     },
     "medium-electric-pole": {
         "collision-boundary-size": 1,
-        "image-size": [128, 320],
-        "image-offset": [-64, -224],
+        "image-size": [64, 160],
+        "image-offset": [-32, -112],
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [16, -201],
-                        "red-wire": [44, -182],
-                        "green-wire": [-13, -187]
+                        "yellow-wire": [8, -100.5],
+                        "red-wire": [22, -91],
+                        "green-wire": [-6.5, -93.5]
                     }
                 },
-                "shadow-size": [280, 64],
-                "shadow-image-pos": 15486,
-                "shadow-offset": [-26, -33]
+                "shadow-size": [140, 32],
+                "shadow-image-pos": 7743,
+                "shadow-offset": [-13, -16.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [16, -199],
-                        "red-wire": [28, -167],
-                        "green-wire": [-7, -202]
+                        "yellow-wire": [8, -99.5],
+                        "red-wire": [14, -83.5],
+                        "green-wire": [-3.5, -101]
                     }
                 },
-                "shadow-size": [280, 64],
-                "shadow-image-pos": 15766,
-                "shadow-offset": [-26, -33]
+                "shadow-size": [140, 32],
+                "shadow-image-pos": 7883,
+                "shadow-offset": [-13, -16.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [13, -198],
-                        "red-wire": [5, -168],
-                        "green-wire": [13, -209]
+                        "yellow-wire": [6.5, -99],
+                        "red-wire": [2.5, -84],
+                        "green-wire": [6.5, -104.5]
                     }
                 },
-                "shadow-size": [280, 64],
-                "shadow-image-pos": 16046,
-                "shadow-offset": [-26, -33]
+                "shadow-size": [140, 32],
+                "shadow-image-pos": 8023,
+                "shadow-offset": [-13, -16.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [16, -199],
-                        "red-wire": [-10, -175],
-                        "green-wire": [35, -202]
+                        "yellow-wire": [8, -99.5],
+                        "red-wire": [-5, -87.5],
+                        "green-wire": [17.5, -101]
                     }
                 },
-                "shadow-size": [280, 64],
-                "shadow-image-pos": 16326,
-                "shadow-offset": [-26, -33]
+                "shadow-size": [140, 32],
+                "shadow-image-pos": 8163,
+                "shadow-offset": [-13, -16.5]
             }
         ]
     },
     "nuclear-reactor": {
         "collision-boundary-size": 5,
-        "image-size": 384,
-        "image-pos": [0, 256],
+        "image-size": 192,
+        "image-pos": [0, 128],
         "has-shadow": true,
-        "heat-pipe-connectors": [
-            [-2, -2],
-            [0, -2],
-            [2, -2],
-            [2, 0],
-            [2, 2],
-            [0, 2],
-            [-2, 2],
-            [-2, 0]
-        ],
+        "heat-pipe-connectors": [[-2, -2],[0, -2],[2, -2],[2, 0],[2, 2],[0, 2],[-2, 2],[-2, 0]],
         "heat-pipe-outputs": [
             {
                 "output-coord": [-2, -3],
-                "cover-offset": [-160, -160],
+                "cover-offset": [-80, -80],
                 "cover-pos": [0, 0]
             },
             {
                 "output-coord": [0, -3],
-                "cover-offset": [-32, -160],
-                "cover-pos": [64, 0]
+                "cover-offset": [-16, -80],
+                "cover-pos": [32, 0]
             },
             {
                 "output-coord": [2, -3],
-                "cover-offset": [96, -160],
-                "cover-pos": [128, 0]
+                "cover-offset": [48, -80],
+                "cover-pos": [64, 0]
             },
             {
                 "output-coord": [3, -2],
-                "cover-offset": [96, -160],
-                "cover-pos": [192, 0]
+                "cover-offset": [48, -80],
+                "cover-pos": [96, 0]
             },
             {
                 "output-coord": [3, 0],
-                "cover-offset": [96, -32],
-                "cover-pos": [256, 0]
+                "cover-offset": [48, -16],
+                "cover-pos": [128, 0]
             },
             {
                 "output-coord": [3, 2],
-                "cover-offset": [96, 96],
-                "cover-pos": [320, 0]
+                "cover-offset": [48, 48],
+                "cover-pos": [160, 0]
             },
             {
                 "output-coord": [2, 3],
-                "cover-offset": [96, 96],
-                "cover-pos": [0, 64]
+                "cover-offset": [48, 48],
+                "cover-pos": [0, 32]
             },
             {
                 "output-coord": [0, 3],
-                "cover-offset": [-32, 96],
-                "cover-pos": [64, 64]
+                "cover-offset": [-16, 48],
+                "cover-pos": [32, 32]
             },
             {
                 "output-coord": [-2, 3],
-                "cover-offset": [-160, 96],
-                "cover-pos": [128, 64]
+                "cover-offset": [-80, 48],
+                "cover-pos": [64, 32]
             },
             {
                 "output-coord": [-3, 2],
-                "cover-offset": [-160, 96],
-                "cover-pos": [192, 64]
+                "cover-offset": [-80, 48],
+                "cover-pos": [96, 32]
             },
             {
                 "output-coord": [-3, 0],
-                "cover-offset": [-160, -32],
-                "cover-pos": [256, 64]
+                "cover-offset": [-80, -16],
+                "cover-pos": [128, 32]
             },
             {
                 "output-coord": [-3, -2],
-                "cover-offset": [-160, -160],
-                "cover-pos": [320, 64]
+                "cover-offset": [-80, -80],
+                "cover-pos": [160, 32]
             }
         ],
-        "shadow-size": [525, 323],
-        "shadow-image-pos": 16606,
-        "shadow-offset": [-159, -162]
+        "shadow-size": [262.5, 161.5],
+        "shadow-image-pos": 8303,
+        "shadow-offset": [-79.5, -81]
     },
     "offshore-pump": {
         "collision-boundary-size": [1, 2],
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
         "dir-versions": [
             {
                 "pipe-connectors": [[0, -0.5]],
-                "circuit-connector-pos": 576,
-                "circuit-connector-offset": [-58, -72],
+                "circuit-connector-pos": 288,
+                "circuit-connector-offset": [-29, -36],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-34, -32],
-                        "green-wire": [-43, -23]
+                        "red-wire": [-17, -16],
+                        "green-wire": [-21.5, -11.5]
                     }
                 },
-                "shadow-size": [160, 158],
-                "shadow-image-pos": 17131,
-                "shadow-offset": [-49, -80]
+                "shadow-size": [80, 79],
+                "shadow-image-pos": 8565.5,
+                "shadow-offset": [-24.5, -40]
             },
             {
                 "pipe-connectors": [[0.5, 0]],
                 "pipe-outputs": [
                     {
                         "output-coord": [1.5, 0],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "circuit-connector-pos": 896,
-                "circuit-connector-offset": [12, -21],
+                "circuit-connector-pos": 448,
+                "circuit-connector-offset": [6, -10.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [62, 13],
-                        "green-wire": [64, 27]
+                        "red-wire": [31, 6.5],
+                        "green-wire": [32, 13.5]
                     }
                 },
-                "shadow-size": [172, 65],
-                "shadow-image-pos": 17291,
-                "shadow-offset": [-60, -16]
+                "shadow-size": [86, 32.5],
+                "shadow-image-pos": 8645.5,
+                "shadow-offset": [-30, -8]
             },
             {
                 "pipe-connectors": [[0, 0.5]],
                 "pipe-outputs": [
                     {
                         "output-coord": [0, 1.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "circuit-connector-pos": 768,
-                "circuit-connector-offset": [-63, -15],
+                "circuit-connector-pos": 384,
+                "circuit-connector-offset": [-31.5, -7.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-37, 26],
-                        "green-wire": [-42, 37]
+                        "red-wire": [-18.5, 13],
+                        "green-wire": [-21, 18.5]
                     }
                 },
-                "shadow-size": [149, 133],
-                "shadow-image-pos": 17463,
-                "shadow-offset": [-48, -48]
+                "shadow-size": [74.5, 66.5],
+                "shadow-image-pos": 8731.5,
+                "shadow-offset": [-24, -24]
             },
             {
                 "pipe-connectors": [[-0.5, 0]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1.5, 0],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ],
-                "circuit-connector-pos": 704,
-                "circuit-connector-offset": [-77, -21],
+                "circuit-connector-pos": 352,
+                "circuit-connector-offset": [-38.5, -10.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-27, 13],
-                        "green-wire": [-25, 27]
+                        "red-wire": [-13.5, 6.5],
+                        "green-wire": [-12.5, 13.5]
                     }
                 },
-                "shadow-size": [176, 65],
-                "shadow-image-pos": 17612,
-                "shadow-offset": [-64, -16]
+                "shadow-size": [88, 32.5],
+                "shadow-image-pos": 8806,
+                "shadow-offset": [-32, -8]
             }
         ]
     },
     "oil-refinery": {
         "collision-boundary-size": 5,
-        "image-size": 448,
+        "image-size": 224,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [-2, -2],
-                    [0, -2],
-                    [2, -2],
-                    [-1, 2],
-                    [1, 2]
-                ],
+                "pipe-connectors": [[-2, -2],[0, -2],[2, -2],[-1, 2],[1, 2]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1, 3],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [1, 3],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [624, 420],
-                "shadow-image-pos": 17788,
-                "shadow-offset": [-173, -176]
+                "shadow-size": [312, 210],
+                "shadow-image-pos": 8894,
+                "shadow-offset": [-86.5, -88]
             },
             {
-                "pipe-connectors": [
-                    [-2, -1],
-                    [-2, 1],
-                    [2, -2],
-                    [2, 0],
-                    [2, 2]
-                ],
+                "pipe-connectors": [[-2, -1],[-2, 1],[2, -2],[2, 0],[2, 2]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-3, -1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [-3, 1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [3, -2],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [3, 0],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [3, 2],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-size": [596, 412],
-                "shadow-image-pos": 18412,
-                "shadow-offset": [-161, -149]
+                "shadow-size": [298, 206],
+                "shadow-image-pos": 9206,
+                "shadow-offset": [-80.5, -74.5]
             },
             {
-                "pipe-connectors": [
-                    [-1, -2],
-                    [1, -2],
-                    [-2, 2],
-                    [0, 2],
-                    [2, 2]
-                ],
+                "pipe-connectors": [[-1, -2],[1, -2],[-2, 2],[0, 2],[2, 2]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, 3],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [0, 3],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [2, 3],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [518, 360],
-                "shadow-image-pos": 19008,
-                "shadow-offset": [-168, -176]
+                "shadow-size": [259, 180],
+                "shadow-image-pos": 9504,
+                "shadow-offset": [-84, -88]
             },
             {
-                "pipe-connectors": [
-                    [-2, -2],
-                    [-2, 0],
-                    [-2, 2],
-                    [2, -1],
-                    [2, 1]
-                ],
+                "pipe-connectors": [[-2, -2],[-2, 0],[-2, 2],[2, -1],[2, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-3, -2],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [-3, 0],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [-3, 2],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [3, -1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [3, 1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-size": [662, 426],
-                "shadow-image-pos": 19526,
-                "shadow-offset": [-160, -161]
+                "shadow-size": [331, 213],
+                "shadow-image-pos": 9763,
+                "shadow-offset": [-80, -80.5]
             }
         ]
     },
     "pipe": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
-        "shadow-image-pos": 20188
+        "shadow-image-pos": 10094
     },
     "pipe-to-ground": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "shadow-image-pos": 20700
+                "shadow-image-pos": 10350
             },
             {
                 "pipe-outputs": [
                     {
                         "output-coord": [1, 0],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "shadow-image-pos": 20828
+                "shadow-image-pos": 10414
             },
             {
                 "pipe-outputs": [
                     {
                         "output-coord": [0, 1],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-image-pos": 20956
+                "shadow-image-pos": 10478
             },
             {
                 "pipe-outputs": [
                     {
                         "output-coord": [-1, 0],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ],
-                "shadow-image-pos": 21084
+                "shadow-image-pos": 10542
             }
         ]
     },
     "power-switch": {
         "collision-boundary-size": 2,
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
         "wire-connectors": {
             "1": {
-                "red-wire": [-39, 56],
-                "green-wire": [-39, 56]
+                "red-wire": [-19.5, 28],
+                "green-wire": [-19.5, 28]
             },
             "Cu0": {
-                "yellow-wire": [-51, -62]
+                "yellow-wire": [-25.5, -31]
             },
             "Cu1": {
-                "yellow-wire": [59, -59]
+                "yellow-wire": [29.5, -29.5]
             }
         },
-        "shadow-image-pos": 21212
+        "shadow-image-pos": 10606
     },
     "programmable-speaker": {
         "collision-boundary-size": 1,
-        "image-size": [128, 256],
-        "image-offset": [-64, -224],
+        "image-size": [64, 128],
+        "image-offset": [-32, -112],
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 704,
-        "circuit-connector-offset": [-31, -46],
+        "circuit-connector-pos": 352,
+        "circuit-connector-offset": [-15.5, -23],
         "wire-connectors": {
             "1": {
-                "red-wire": [20, -14],
-                "green-wire": [21, 1]
+                "red-wire": [10, -7],
+                "green-wire": [10.5, 0.5]
             }
         },
-        "shadow-size": [237, 50],
-        "shadow-image-pos": 21596,
-        "shadow-offset": [-12, -30]
+        "shadow-size": [118.5, 25],
+        "shadow-image-pos": 10798,
+        "shadow-offset": [-6, -15]
     },
     "pump": {
         "collision-boundary-size": [1, 2],
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [0, -0.5],
-                    [0, 0.5]
-                ],
+                "pipe-connectors": [[0, -0.5],[0, 0.5]],
                 "pipe-outputs": [
                     {
                         "output-coord": [0, 1.5],
-                        "cover-pos": [256, 0]
-                    }
-                ],
-                "circuit-connector-pos": 768,
-                "circuit-connector-offset": [-61, -47],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [-35, -6],
-                        "green-wire": [-40, 5]
-                    }
-                },
-                "shadow-size": [70, 169],
-                "shadow-image-pos": 23017,
-                "shadow-offset": [-3, -80]
-            },
-            {
-                "pipe-connectors": [
-                    [-0.5, 0],
-                    [0.5, 0]
-                ],
-                "pipe-outputs": [
-                    {
-                        "output-coord": [-1.5, 0],
-                        "cover-pos": [384, 0]
-                    },
-                    {
-                        "output-coord": [1.5, 0],
                         "cover-pos": [128, 0]
                     }
                 ],
-                "circuit-connector-pos": 896,
-                "circuit-connector-offset": [-63, -23],
+                "circuit-connector-pos": 384,
+                "circuit-connector-offset": [-30.5, -23.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-13, 11],
-                        "green-wire": [-11, 25]
+                        "red-wire": [-17.5, -3],
+                        "green-wire": [-20, 2.5]
                     }
                 },
-                "shadow-size": [128, 69],
-                "shadow-image-pos": 23087,
-                "shadow-offset": [-64, -12]
+                "shadow-size": [35, 84.5],
+                "shadow-image-pos": 11508.5,
+                "shadow-offset": [-1.5, -40]
             },
             {
-                "pipe-connectors": [
-                    [0, -0.5],
-                    [0, 0.5]
+                "pipe-connectors": [[-0.5, 0],[0.5, 0]],
+                "pipe-outputs": [
+                    {
+                        "output-coord": [-1.5, 0],
+                        "cover-pos": [192, 0]
+                    },
+                    {
+                        "output-coord": [1.5, 0],
+                        "cover-pos": [64, 0]
+                    }
                 ],
+                "circuit-connector-pos": 448,
+                "circuit-connector-offset": [-31.5, -11.5],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [-6.5, 5.5],
+                        "green-wire": [-5.5, 12.5]
+                    }
+                },
+                "shadow-size": [64, 34.5],
+                "shadow-image-pos": 11543.5,
+                "shadow-offset": [-32, -6]
+            },
+            {
+                "pipe-connectors": [[0, -0.5],[0, 0.5]],
                 "pipe-outputs": [
                     {
                         "output-coord": [0, 1.5],
-                        "cover-pos": [256, 0]
-                    }
-                ],
-                "circuit-connector-pos": 768,
-                "circuit-connector-offset": [-60, -47],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [-34, -6],
-                        "green-wire": [-39, 5]
-                    }
-                },
-                "shadow-size": [83, 144],
-                "shadow-image-pos": 23215,
-                "shadow-offset": [-3, -80]
-            },
-            {
-                "pipe-connectors": [
-                    [-0.5, 0],
-                    [0.5, 0]
-                ],
-                "pipe-outputs": [
-                    {
-                        "output-coord": [-1.5, 0],
-                        "cover-pos": [384, 0]
-                    },
-                    {
-                        "output-coord": [1.5, 0],
                         "cover-pos": [128, 0]
                     }
                 ],
-                "circuit-connector-pos": 896,
-                "circuit-connector-offset": [-4, -21],
+                "circuit-connector-pos": 384,
+                "circuit-connector-offset": [-30, -23.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [46, 13],
-                        "green-wire": [48, 27]
+                        "red-wire": [-17, -3],
+                        "green-wire": [-19.5, 2.5]
                     }
                 },
-                "shadow-size": [130, 56],
-                "shadow-image-pos": 23298,
-                "shadow-offset": [-65, -1]
+                "shadow-size": [41.5, 72],
+                "shadow-image-pos": 11607.5,
+                "shadow-offset": [-1.5, -40]
+            },
+            {
+                "pipe-connectors": [[-0.5, 0],[0.5, 0]],
+                "pipe-outputs": [
+                    {
+                        "output-coord": [-1.5, 0],
+                        "cover-pos": [192, 0]
+                    },
+                    {
+                        "output-coord": [1.5, 0],
+                        "cover-pos": [64, 0]
+                    }
+                ],
+                "circuit-connector-pos": 448,
+                "circuit-connector-offset": [-2, -10.5],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [23, 6.5],
+                        "green-wire": [24, 13.5]
+                    }
+                },
+                "shadow-size": [65, 28],
+                "shadow-image-pos": 11649,
+                "shadow-offset": [-32.5, -0.5]
             }
         ]
     },
     "pumpjack": {
         "collision-boundary-size": 3,
-        "image-size": 320,
+        "image-size": 160,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
         "dir-versions": [
             {
                 "pipe-connectors": [[1, -1]],
-                "circuit-connector-pos": 896,
-                "circuit-connector-offset": [-25, -87],
+                "circuit-connector-pos": 448,
+                "circuit-connector-offset": [-12.5, -43.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [25, -53],
-                        "green-wire": [27, -39]
+                        "red-wire": [12.5, -26.5],
+                        "green-wire": [13.5, -19.5]
                     }
                 },
-                "shadow-size": [296, 209],
-                "shadow-image-pos": 21833,
-                "shadow-offset": [-112, -115]
+                "shadow-size": [148, 104.5],
+                "shadow-image-pos": 10916.5,
+                "shadow-offset": [-56, -57.5]
             },
             {
                 "pipe-connectors": [[1, -1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [2, -1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ],
-                "circuit-connector-pos": 896,
-                "circuit-connector-offset": [-25, -87],
+                "circuit-connector-pos": 448,
+                "circuit-connector-offset": [-12.5, -43.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [25, -53],
-                        "green-wire": [27, -39]
+                        "red-wire": [12.5, -26.5],
+                        "green-wire": [13.5, -19.5]
                     }
                 },
-                "shadow-size": [296, 184],
-                "shadow-image-pos": 22129,
-                "shadow-offset": [-111, -76]
+                "shadow-size": [148, 92],
+                "shadow-image-pos": 11064.5,
+                "shadow-offset": [-55.5, -38]
             },
             {
                 "pipe-connectors": [[-1, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-1, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "circuit-connector-pos": 896,
-                "circuit-connector-offset": [-25, -87],
+                "circuit-connector-pos": 448,
+                "circuit-connector-offset": [-12.5, -43.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [25, -53],
-                        "green-wire": [27, -39]
+                        "red-wire": [12.5, -26.5],
+                        "green-wire": [13.5, -19.5]
                     }
                 },
-                "shadow-size": [296, 184],
-                "shadow-image-pos": 22425,
-                "shadow-offset": [-111, -81]
+                "shadow-size": [148, 92],
+                "shadow-image-pos": 11212.5,
+                "shadow-offset": [-55.5, -40.5]
             },
             {
                 "pipe-connectors": [[-1, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, 1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ],
-                "circuit-connector-pos": 896,
-                "circuit-connector-offset": [-25, -87],
+                "circuit-connector-pos": 448,
+                "circuit-connector-offset": [-12.5, -43.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [25, -53],
-                        "green-wire": [27, -39]
+                        "red-wire": [12.5, -26.5],
+                        "green-wire": [13.5, -19.5]
                     }
                 },
-                "shadow-size": [296, 176],
-                "shadow-image-pos": 22721,
-                "shadow-offset": [-111, -74]
+                "shadow-size": [148, 88],
+                "shadow-image-pos": 11360.5,
+                "shadow-offset": [-55.5, -37]
             }
         ]
     },
     "radar": {
         "collision-boundary-size": 3,
-        "image-size": 288,
+        "image-size": 144,
         "has-shadow": true,
-        "shadow-size": [305, 173],
-        "shadow-image-pos": 23428,
-        "shadow-offset": [-107, -58]
+        "shadow-size": [152.5, 86.5],
+        "shadow-image-pos": 11714,
+        "shadow-offset": [-53.5, -29]
     },
     "rail-chain-signal": {
         "collision-boundary-size": 1,
-        "image-size": 448,
+        "image-size": 224,
         "has-circuit-connector": true,
         "dir-count": 8,
         "dir-versions": [
             {
-                "circuit-connector-pos": 384,
-                "circuit-connector-offset": [-35, 5],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [-24, 27],
-                        "green-wire": [-20, 13]
-                    }
-                }
-            },
-            {
-                "circuit-connector-pos": 320,
-                "circuit-connector-offset": [-59, 0],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [-40, 12],
-                        "green-wire": [-29, 4]
-                    }
-                }
-            },
-            {
-                "circuit-connector-pos": 256,
-                "circuit-connector-offset": [-74, -2],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [-41, 6],
-                        "green-wire": [-26, 6]
-                    }
-                }
-            },
-            {
                 "circuit-connector-pos": 192,
-                "circuit-connector-offset": [-20, -12],
+                "circuit-connector-offset": [-17.5, 2.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [25, 2],
-                        "green-wire": [36, 10]
+                        "red-wire": [-12, 13.5],
+                        "green-wire": [-10, 6.5]
+                    }
+                }
+            },
+            {
+                "circuit-connector-pos": 160,
+                "circuit-connector-offset": [-29.5, 0],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [-20, 6],
+                        "green-wire": [-14.5, 2]
                     }
                 }
             },
             {
                 "circuit-connector-pos": 128,
-                "circuit-connector-offset": [-24, -15],
+                "circuit-connector-offset": [-37, -1],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [25, 5],
-                        "green-wire": [28, 20]
+                        "red-wire": [-20.5, 3],
+                        "green-wire": [-13, 3]
+                    }
+                }
+            },
+            {
+                "circuit-connector-pos": 96,
+                "circuit-connector-offset": [-10, -6],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [12.5, 1],
+                        "green-wire": [18, 5]
                     }
                 }
             },
             {
                 "circuit-connector-pos": 64,
-                "circuit-connector-offset": [-34, -14],
+                "circuit-connector-offset": [-12, -7.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [10, 20],
-                        "green-wire": [-1, 28]
+                        "red-wire": [12.5, 2.5],
+                        "green-wire": [14, 10]
+                    }
+                }
+            },
+            {
+                "circuit-connector-pos": 32,
+                "circuit-connector-offset": [-17, -7],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [5, 10],
+                        "green-wire": [-0.5, 14]
                     }
                 }
             },
             {
                 "circuit-connector-pos": 0,
-                "circuit-connector-offset": [-47, -15],
+                "circuit-connector-offset": [-23.5, -7.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-18, 27],
-                        "green-wire": [-33, 27]
+                        "red-wire": [-9, 13.5],
+                        "green-wire": [-16.5, 13.5]
                     }
                 }
             },
             {
-                "circuit-connector-pos": 448,
-                "circuit-connector-offset": [-15, -5],
+                "circuit-connector-pos": 224,
+                "circuit-connector-offset": [-7.5, -2.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [0, 29],
-                        "green-wire": [-11, 21]
+                        "red-wire": [0, 14.5],
+                        "green-wire": [-5.5, 10.5]
                     }
                 }
             }
@@ -2826,87 +2694,87 @@
     },
     "rail-signal": {
         "collision-boundary-size": 1,
-        "image-size": 192,
+        "image-size": 96,
         "has-circuit-connector": true,
         "dir-count": 8,
         "dir-versions": [
             {
-                "circuit-connector-pos": 256,
-                "circuit-connector-offset": [-5, -44],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [28, -36],
-                        "green-wire": [43, -36]
-                    }
-                }
-            },
-            {
-                "circuit-connector-pos": 192,
-                "circuit-connector-offset": [6, -14],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [51, 0],
-                        "green-wire": [62, 8]
-                    }
-                }
-            },
-            {
                 "circuit-connector-pos": 128,
-                "circuit-connector-offset": [-17, 13],
+                "circuit-connector-offset": [-2.5, -22],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [32, 33],
-                        "green-wire": [35, 48]
+                        "red-wire": [14, -18],
+                        "green-wire": [21.5, -18]
+                    }
+                }
+            },
+            {
+                "circuit-connector-pos": 96,
+                "circuit-connector-offset": [3, -7],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [25.5, 0],
+                        "green-wire": [31, 4]
                     }
                 }
             },
             {
                 "circuit-connector-pos": 64,
-                "circuit-connector-offset": [-43, 9],
+                "circuit-connector-offset": [-8.5, 6.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-1, 44],
-                        "green-wire": [-10, 50]
+                        "red-wire": [16, 16.5],
+                        "green-wire": [17.5, 24]
+                    }
+                }
+            },
+            {
+                "circuit-connector-pos": 32,
+                "circuit-connector-offset": [-21.5, 4.5],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [-0.5, 22],
+                        "green-wire": [-5, 25]
                     }
                 }
             },
             {
                 "circuit-connector-pos": 0,
-                "circuit-connector-offset": [-56, -4],
+                "circuit-connector-offset": [-28, -2],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-27, 38],
-                        "green-wire": [-42, 38]
+                        "red-wire": [-13.5, 19],
+                        "green-wire": [-21, 19]
                     }
                 }
             },
             {
-                "circuit-connector-pos": 448,
-                "circuit-connector-offset": [-62, -39],
+                "circuit-connector-pos": 224,
+                "circuit-connector-offset": [-31, -19.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-47, -5],
-                        "green-wire": [-58, -13]
+                        "red-wire": [-23.5, -2.5],
+                        "green-wire": [-29, -6.5]
                     }
                 }
             },
             {
-                "circuit-connector-pos": 384,
-                "circuit-connector-offset": [-45, -59],
+                "circuit-connector-pos": 192,
+                "circuit-connector-offset": [-22.5, -29.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-34, -37],
-                        "green-wire": [-30, -51]
+                        "red-wire": [-17, -18.5],
+                        "green-wire": [-15, -25.5]
                     }
                 }
             },
             {
-                "circuit-connector-pos": 320,
-                "circuit-connector-offset": [-16, -54],
+                "circuit-connector-pos": 160,
+                "circuit-connector-offset": [-8, -27],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [2, -42],
-                        "green-wire": [14, -50]
+                        "red-wire": [1, -21],
+                        "green-wire": [7, -25]
                     }
                 }
             }
@@ -2914,143 +2782,137 @@
     },
     "roboport": {
         "collision-boundary-size": 4,
-        "image-size": 320,
+        "image-size": 160,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 704,
-        "circuit-connector-offset": [6, 52],
+        "circuit-connector-pos": 352,
+        "circuit-connector-offset": [3, 26],
         "wire-connectors": {
             "1": {
-                "red-wire": [56, 86],
-                "green-wire": [58, 100]
+                "red-wire": [28, 43],
+                "green-wire": [29, 50]
             }
         },
-        "shadow-size": [294, 201],
-        "shadow-image-pos": 23733,
-        "shadow-offset": [-89, -61]
+        "shadow-size": [147, 100.5],
+        "shadow-image-pos": 11866.5,
+        "shadow-offset": [-44.5, -30.5]
     },
     "rocket-silo": {
         "collision-boundary-size": 9,
-        "image-size": 640,
+        "image-size": 320,
         "has-shadow": true,
-        "shadow-image-pos": 24027
+        "shadow-image-pos": 12013.5
     },
     "small-electric-pole": {
         "collision-boundary-size": 1,
-        "image-size": [128, 256],
-        "image-offset": [-64, -224],
+        "image-size": [64, 128],
+        "image-offset": [-32, -112],
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [0, -167],
-                        "red-wire": [26, -164],
-                        "green-wire": [-25, -164]
+                        "yellow-wire": [0, -83.5],
+                        "red-wire": [13, -82],
+                        "green-wire": [-12.5, -82]
                     }
                 },
-                "shadow-size": [256, 52],
-                "shadow-image-pos": 24667,
-                "shadow-offset": [-26, -20]
+                "shadow-size": [128, 26],
+                "shadow-image-pos": 12333.5,
+                "shadow-offset": [-13, -10]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [4, -165],
-                        "red-wire": [24, -154],
-                        "green-wire": [-11, -182]
+                        "yellow-wire": [2, -82.5],
+                        "red-wire": [12, -77],
+                        "green-wire": [-5.5, -91]
                     }
                 },
-                "shadow-size": [256, 52],
-                "shadow-image-pos": 24923,
-                "shadow-offset": [-26, -20]
+                "shadow-size": [128, 26],
+                "shadow-image-pos": 12461.5,
+                "shadow-offset": [-13, -10]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [6, -160],
-                        "red-wire": [10, -144],
-                        "green-wire": [11, -180]
+                        "yellow-wire": [3, -80],
+                        "red-wire": [5, -72],
+                        "green-wire": [5.5, -90]
                     }
                 },
-                "shadow-size": [256, 52],
-                "shadow-image-pos": 25179,
-                "shadow-offset": [-26, -20]
+                "shadow-size": [128, 26],
+                "shadow-image-pos": 12589.5,
+                "shadow-offset": [-13, -10]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [3, -176],
-                        "red-wire": [-18, -163],
-                        "green-wire": [18, -191]
+                        "yellow-wire": [1.5, -88],
+                        "red-wire": [-9, -81.5],
+                        "green-wire": [9, -95.5]
                     }
                 },
-                "shadow-size": [256, 52],
-                "shadow-image-pos": 25435,
-                "shadow-offset": [-26, -20]
+                "shadow-size": [128, 26],
+                "shadow-image-pos": 12717.5,
+                "shadow-offset": [-13, -10]
             }
         ]
     },
     "small-lamp": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-22, -14],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-11, -7],
         "wire-connectors": {
             "1": {
-                "red-wire": [28, 20],
-                "green-wire": [30, 34]
+                "red-wire": [14, 10],
+                "green-wire": [15, 17]
             }
         },
-        "shadow-size": [76, 47],
-        "shadow-image-pos": 25691,
-        "shadow-offset": [-29, -13]
+        "shadow-size": [38, 23.5],
+        "shadow-image-pos": 12845.5,
+        "shadow-offset": [-14.5, -6.5]
     },
     "solar-panel": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
-        "shadow-size": [219, 180],
-        "shadow-image-pos": 25767,
-        "shadow-offset": [-91, -77]
+        "shadow-size": [109.5, 90],
+        "shadow-image-pos": 12883.5,
+        "shadow-offset": [-45.5, -38.5]
     },
     "splitter": {
         "collision-boundary-size": [2, 1],
-        "image-size": 192,
+        "image-size": 96,
         "dir-count": 4,
         "dir-versions": [
             {
-                "belt-connectors": [
-                    [-0.5, 0],
-                    [0.5, 0]
-                ],
+                "belt-connectors": [[-0.5, 0],[0.5, 0]],
                 "belt-outputs": [
                     {
                         "output-coord": [-0.5, -1],
-                        "cover-pos": [0, 128]
+                        "cover-pos": [0, 64]
                     },
                     {
                         "output-coord": [0.5, -1],
-                        "cover-pos": [0, 128]
+                        "cover-pos": [0, 64]
                     },
                     {
                         "output-coord": [-0.5, 1],
-                        "cover-pos": [128, 128]
+                        "cover-pos": [64, 64]
                     },
                     {
                         "output-coord": [0.5, 1],
-                        "cover-pos": [128, 128]
+                        "cover-pos": [64, 64]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [0, -0.5],
-                    [0, 0.5]
-                ],
+                "belt-connectors": [[0, -0.5],[0, 0.5]],
                 "belt-outputs": [
                     {
                         "output-coord": [-1, -0.5],
@@ -3062,59 +2924,53 @@
                     },
                     {
                         "output-coord": [1, -0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [1, 0.5],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [-0.5, 0],
-                    [0.5, 0]
-                ],
+                "belt-connectors": [[-0.5, 0],[0.5, 0]],
                 "belt-outputs": [
                     {
                         "output-coord": [-0.5, -1],
-                        "cover-pos": [384, 128]
+                        "cover-pos": [192, 64]
                     },
                     {
                         "output-coord": [0.5, -1],
-                        "cover-pos": [384, 128]
+                        "cover-pos": [192, 64]
                     },
                     {
                         "output-coord": [-0.5, 1],
-                        "cover-pos": [256, 128]
+                        "cover-pos": [128, 64]
                     },
                     {
                         "output-coord": [0.5, 1],
-                        "cover-pos": [256, 128]
+                        "cover-pos": [128, 64]
                     }
                 ]
             },
             {
-                "belt-connectors": [
-                    [0, -0.5],
-                    [0, 0.5]
-                ],
+                "belt-connectors": [[0, -0.5],[0, 0.5]],
                 "belt-outputs": [
                     {
                         "output-coord": [-1, -0.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [-1, 0.5],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     },
                     {
                         "output-coord": [1, -0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [1, 0.5],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     }
                 ]
             }
@@ -3122,7 +2978,7 @@
     },
     "stack-filter-inserter": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
@@ -3130,52 +2986,52 @@
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [35, 8],
-                        "green-wire": [27, 17]
+                        "red-wire": [17.5, 4],
+                        "green-wire": [13.5, 8.5]
                     }
                 },
-                "shadow-size": [85, 65],
-                "shadow-image-pos": 13717,
-                "shadow-offset": [-29, -17]
+                "shadow-size": [42.5, 32.5],
+                "shadow-image-pos": 6858.5,
+                "shadow-offset": [-14.5, -8.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-9, -21],
-                        "green-wire": [-22, -17]
+                        "red-wire": [-4.5, -10.5],
+                        "green-wire": [-11, -8.5]
                     }
                 },
-                "shadow-size": [91, 52],
-                "shadow-image-pos": 13802,
-                "shadow-offset": [-36, -16]
+                "shadow-size": [45.5, 26],
+                "shadow-image-pos": 6901,
+                "shadow-offset": [-18, -8]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [28, -15],
-                        "green-wire": [35, -4]
+                        "red-wire": [14, -7.5],
+                        "green-wire": [17.5, -2]
                     }
                 },
-                "shadow-size": [84, 51],
-                "shadow-image-pos": 13893,
-                "shadow-offset": [-28, -9]
+                "shadow-size": [42, 25.5],
+                "shadow-image-pos": 6946.5,
+                "shadow-offset": [-14, -4.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [18, -20],
-                        "green-wire": [29, -15]
+                        "red-wire": [9, -10],
+                        "green-wire": [14.5, -7.5]
                     }
                 },
-                "shadow-size": [88, 43],
-                "shadow-image-pos": 13977,
-                "shadow-offset": [-34, -6]
+                "shadow-size": [44, 21.5],
+                "shadow-image-pos": 6988.5,
+                "shadow-offset": [-17, -3]
             }
         ]
     },
     "stack-inserter": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
@@ -3183,257 +3039,239 @@
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [35, 8],
-                        "green-wire": [27, 17]
+                        "red-wire": [17.5, 4],
+                        "green-wire": [13.5, 8.5]
                     }
                 },
-                "shadow-size": [85, 65],
-                "shadow-image-pos": 13717,
-                "shadow-offset": [-29, -17]
+                "shadow-size": [42.5, 32.5],
+                "shadow-image-pos": 6858.5,
+                "shadow-offset": [-14.5, -8.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-9, -21],
-                        "green-wire": [-22, -17]
+                        "red-wire": [-4.5, -10.5],
+                        "green-wire": [-11, -8.5]
                     }
                 },
-                "shadow-size": [91, 52],
-                "shadow-image-pos": 13802,
-                "shadow-offset": [-36, -16]
+                "shadow-size": [45.5, 26],
+                "shadow-image-pos": 6901,
+                "shadow-offset": [-18, -8]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [28, -15],
-                        "green-wire": [35, -4]
+                        "red-wire": [14, -7.5],
+                        "green-wire": [17.5, -2]
                     }
                 },
-                "shadow-size": [84, 51],
-                "shadow-image-pos": 13893,
-                "shadow-offset": [-28, -9]
+                "shadow-size": [42, 25.5],
+                "shadow-image-pos": 6946.5,
+                "shadow-offset": [-14, -4.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [18, -20],
-                        "green-wire": [29, -15]
+                        "red-wire": [9, -10],
+                        "green-wire": [14.5, -7.5]
                     }
                 },
-                "shadow-size": [88, 43],
-                "shadow-image-pos": 13977,
-                "shadow-offset": [-34, -6]
+                "shadow-size": [44, 21.5],
+                "shadow-image-pos": 6988.5,
+                "shadow-offset": [-17, -3]
             }
         ]
     },
     "steam-engine": {
         "collision-boundary-size": [3, 5],
-        "image-size": 448,
+        "image-size": 224,
         "has-shadow": true,
         "dir-count": 2,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [0, -2],
-                    [0, 2]
-                ],
+                "pipe-connectors": [[0, -2],[0, 2]],
                 "pipe-outputs": [
                     {
                         "output-coord": [0, 3],
-                        "cover-pos": [256, 0]
-                    }
-                ],
-                "shadow-size": [327, 295],
-                "shadow-image-pos": 25986,
-                "shadow-offset": [-84, -135]
-            },
-            {
-                "pipe-connectors": [
-                    [-2, 0],
-                    [2, 0]
-                ],
-                "pipe-outputs": [
-                    {
-                        "output-coord": [-3, 0],
-                        "cover-pos": [384, 0]
-                    },
-                    {
-                        "output-coord": [3, 0],
                         "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [489, 156],
-                "shadow-image-pos": 26313,
-                "shadow-offset": [-160, -32]
+                "shadow-size": [163.5, 147.5],
+                "shadow-image-pos": 12993,
+                "shadow-offset": [-42, -67.5]
+            },
+            {
+                "pipe-connectors": [[-2, 0],[2, 0]],
+                "pipe-outputs": [
+                    {
+                        "output-coord": [-3, 0],
+                        "cover-pos": [192, 0]
+                    },
+                    {
+                        "output-coord": [3, 0],
+                        "cover-pos": [64, 0]
+                    }
+                ],
+                "shadow-size": [244.5, 78],
+                "shadow-image-pos": 13156.5,
+                "shadow-offset": [-80, -16]
             }
         ]
     },
     "steam-turbine": {
         "collision-boundary-size": [3, 5],
-        "image-size": 448,
+        "image-size": 224,
         "has-shadow": true,
         "dir-count": 2,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [0, -2],
-                    [0, 2]
-                ],
+                "pipe-connectors": [[0, -2],[0, 2]],
                 "pipe-outputs": [
                     {
                         "output-coord": [0, 3],
-                        "cover-pos": [256, 0]
-                    }
-                ],
-                "shadow-size": [302, 344],
-                "shadow-image-pos": 26802,
-                "shadow-offset": [-72, -165]
-            },
-            {
-                "pipe-connectors": [
-                    [-2, 0],
-                    [2, 0]
-                ],
-                "pipe-outputs": [
-                    {
-                        "output-coord": [-3, 0],
-                        "cover-pos": [384, 0]
-                    },
-                    {
-                        "output-coord": [3, 0],
                         "cover-pos": [128, 0]
                     }
                 ],
-                "shadow-size": [435, 149],
-                "shadow-image-pos": 27104,
-                "shadow-offset": [-160, -39]
+                "shadow-size": [151, 172],
+                "shadow-image-pos": 13401,
+                "shadow-offset": [-36, -82.5]
+            },
+            {
+                "pipe-connectors": [[-2, 0],[2, 0]],
+                "pipe-outputs": [
+                    {
+                        "output-coord": [-3, 0],
+                        "cover-pos": [192, 0]
+                    },
+                    {
+                        "output-coord": [3, 0],
+                        "cover-pos": [64, 0]
+                    }
+                ],
+                "shadow-size": [217.5, 74.5],
+                "shadow-image-pos": 13552,
+                "shadow-offset": [-80, -19.5]
             }
         ]
     },
     "steel-chest": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-25, -19],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-12.5, -9.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [25, 15],
-                "green-wire": [27, 29]
+                "red-wire": [12.5, 7.5],
+                "green-wire": [13.5, 14.5]
             }
         },
-        "shadow-size": [110, 46],
-        "shadow-image-pos": 27539,
-        "shadow-offset": [-30, -5]
+        "shadow-size": [55, 23],
+        "shadow-image-pos": 13769.5,
+        "shadow-offset": [-15, -2.5]
     },
     "steel-furnace": {
         "collision-boundary-size": 2,
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
-        "shadow-size": [277, 85],
-        "shadow-image-pos": 27649,
-        "shadow-offset": [-59, -19]
+        "shadow-size": [138.5, 42.5],
+        "shadow-image-pos": 13824.5,
+        "shadow-offset": [-29.5, -9.5]
     },
     "stone-furnace": {
         "collision-boundary-size": 2,
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
-        "shadow-size": [164, 74],
-        "shadow-image-pos": 27926,
-        "shadow-offset": [-52, -10]
+        "shadow-size": [82, 37],
+        "shadow-image-pos": 13963,
+        "shadow-offset": [-26, -5]
     },
     "stone-wall": {
         "collision-boundary-size": 1,
-        "image-size": 192,
+        "image-size": 96,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 384,
-        "circuit-connector-offset": [-31, -63],
+        "circuit-connector-pos": 192,
+        "circuit-connector-offset": [-15.5, -31.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [-20, -41],
-                "green-wire": [-16, -54]
+                "red-wire": [-10, -20.5],
+                "green-wire": [-8, -27]
             }
         },
-        "shadow-size": [192, 192],
-        "shadow-image-pos": 31628,
-        "shadow-offset": [-64, -64]
+        "shadow-size": [96, 96],
+        "shadow-image-pos": 15814,
+        "shadow-offset": [-32, -32]
     },
     "storage-tank": {
         "collision-boundary-size": 3,
-        "image-size": 256,
+        "image-size": 128,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 2,
         "dir-versions": [
             {
-                "pipe-connectors": [
-                    [-1, -1],
-                    [1, 1]
-                ],
+                "pipe-connectors": [[-1, -1],[1, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, -1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
                     },
                     {
                         "output-coord": [2, 1],
-                        "cover-pos": [128, 0]
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [1, 2],
-                        "cover-pos": [256, 0]
+                        "cover-pos": [128, 0]
                     }
                 ],
-                "circuit-connector-pos": 576,
-                "circuit-connector-offset": [36, 7],
+                "circuit-connector-pos": 288,
+                "circuit-connector-offset": [18, 3.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [85, 30],
-                        "green-wire": [88, 45]
+                        "red-wire": [42.5, 15],
+                        "green-wire": [44, 22.5]
                     }
                 },
-                "shadow-size": [283, 233],
-                "shadow-image-pos": 28090,
-                "shadow-offset": [-78, -112]
+                "shadow-size": [141.5, 116.5],
+                "shadow-image-pos": 14045,
+                "shadow-offset": [-39, -56]
             },
             {
-                "pipe-connectors": [
-                    [1, -1],
-                    [-1, 1]
-                ],
+                "pipe-connectors": [[1, -1],[-1, 1]],
                 "pipe-outputs": [
                     {
                         "output-coord": [-2, 1],
-                        "cover-pos": [384, 0]
+                        "cover-pos": [192, 0]
+                    },
+                    {
+                        "output-coord": [-1, 2],
+                        "cover-pos": [64, 0]
                     },
                     {
                         "output-coord": [-1, 2],
                         "cover-pos": [128, 0]
-                    },
-                    {
-                        "output-coord": [-1, 2],
-                        "cover-pos": [256, 0]
                     }
                 ],
-                "circuit-connector-pos": 832,
-                "circuit-connector-offset": [-98, 9],
+                "circuit-connector-pos": 416,
+                "circuit-connector-offset": [-49, 4.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [-58, 49],
-                        "green-wire": [-56, 63]
+                        "red-wire": [-29, 24.5],
+                        "green-wire": [-28, 31.5]
                     }
                 },
-                "shadow-size": [283, 227],
-                "shadow-image-pos": 28373,
-                "shadow-offset": [-96, -112]
+                "shadow-size": [141.5, 113.5],
+                "shadow-image-pos": 14186.5,
+                "shadow-offset": [-48, -56]
             }
         ]
     },
     "straight-rail": {
         "collision-boundary-size": 2,
-        "image-size": 256,
+        "image-size": 128,
         "dir-count": 8,
         "dir-versions": [
             {
@@ -3678,131 +3516,131 @@
     },
     "substation": {
         "collision-boundary-size": 2,
-        "image-size": [192, 384],
-        "image-offset": [-96, -256],
+        "image-size": [96, 192],
+        "image-offset": [-48, -128],
         "has-shadow": true,
         "dir-count": 4,
         "dir-versions": [
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [2, -169],
-                        "red-wire": [45, -160],
-                        "green-wire": [-41, -160]
+                        "yellow-wire": [1, -84.5],
+                        "red-wire": [22.5, -80],
+                        "green-wire": [-20.5, -80]
                     }
                 },
-                "shadow-size": [370, 104],
-                "shadow-image-pos": 28656,
-                "shadow-offset": [-60, -33]
+                "shadow-size": [185, 52],
+                "shadow-image-pos": 14328,
+                "shadow-offset": [-30, -16.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [-1, -168],
-                        "red-wire": [-31, -182],
-                        "green-wire": [30, -139]
+                        "yellow-wire": [-0.5, -84],
+                        "red-wire": [-15.5, -91],
+                        "green-wire": [15, -69.5]
                     }
                 },
-                "shadow-size": [370, 104],
-                "shadow-image-pos": 29026,
-                "shadow-offset": [-60, -33]
+                "shadow-size": [185, 52],
+                "shadow-image-pos": 14513,
+                "shadow-offset": [-30, -16.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [-1, -168],
-                        "red-wire": [0, -192],
-                        "green-wire": [-1, -130]
+                        "yellow-wire": [-0.5, -84],
+                        "red-wire": [0, -96],
+                        "green-wire": [-0.5, -65]
                     }
                 },
-                "shadow-size": [370, 104],
-                "shadow-image-pos": 29396,
-                "shadow-offset": [-60, -33]
+                "shadow-size": [185, 52],
+                "shadow-image-pos": 14698,
+                "shadow-offset": [-30, -16.5]
             },
             {
                 "wire-connectors": {
                     "1": {
-                        "yellow-wire": [-1, -169],
-                        "red-wire": [31, -184],
-                        "green-wire": [-31, -141]
+                        "yellow-wire": [-0.5, -84.5],
+                        "red-wire": [15.5, -92],
+                        "green-wire": [-15.5, -70.5]
                     }
                 },
-                "shadow-size": [370, 104],
-                "shadow-image-pos": 29766,
-                "shadow-offset": [-60, -33]
+                "shadow-size": [185, 52],
+                "shadow-image-pos": 14883,
+                "shadow-offset": [-30, -16.5]
             }
         ]
     },
     "train-stop": {
         "collision-boundary-size": 2,
-        "image-size": 512,
+        "image-size": 256,
         "has-shadow": true,
         "has-circuit-connector": true,
         "dir-count": 4,
         "dir-versions": [
             {
-                "circuit-connector-pos": 1024,
-                "circuit-connector-offset": [-22, -139],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [16, -124],
-                        "green-wire": [23, -113]
-                    }
-                },
-                "shadow-size": [434, 142],
-                "shadow-image-pos": 30136,
-                "shadow-offset": [-178, -44]
-            },
-            {
-                "circuit-connector-pos": 896,
-                "circuit-connector-offset": [-74, -143],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [-24, -109],
-                        "green-wire": [-22, -95]
-                    }
-                },
-                "shadow-size": [339, 220],
-                "shadow-image-pos": 30570,
-                "shadow-offset": [-101, -176]
-            },
-            {
-                "circuit-connector-pos": 768,
-                "circuit-connector-offset": [-41, -208],
-                "wire-connectors": {
-                    "1": {
-                        "red-wire": [-15, -167],
-                        "green-wire": [-20, -156]
-                    }
-                },
-                "shadow-size": [386, 146],
-                "shadow-image-pos": 30909,
-                "shadow-offset": [-64, -96]
-            },
-            {
                 "circuit-connector-pos": 512,
-                "circuit-connector-offset": [-10, -106],
+                "circuit-connector-offset": [-11, -69.5],
                 "wire-connectors": {
                     "1": {
-                        "red-wire": [15, -96],
-                        "green-wire": [2, -89]
+                        "red-wire": [8, -62],
+                        "green-wire": [11.5, -56.5]
                     }
                 },
-                "shadow-size": [333, 172],
-                "shadow-image-pos": 31295,
-                "shadow-offset": [-104, 30]
+                "shadow-size": [217, 71],
+                "shadow-image-pos": 15068,
+                "shadow-offset": [-89, -22]
+            },
+            {
+                "circuit-connector-pos": 448,
+                "circuit-connector-offset": [-37, -71.5],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [-12, -54.5],
+                        "green-wire": [-11, -47.5]
+                    }
+                },
+                "shadow-size": [169.5, 110],
+                "shadow-image-pos": 15285,
+                "shadow-offset": [-50.5, -88]
+            },
+            {
+                "circuit-connector-pos": 384,
+                "circuit-connector-offset": [-20.5, -104],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [-7.5, -83.5],
+                        "green-wire": [-10, -78]
+                    }
+                },
+                "shadow-size": [193, 73],
+                "shadow-image-pos": 15454.5,
+                "shadow-offset": [-32, -48]
+            },
+            {
+                "circuit-connector-pos": 256,
+                "circuit-connector-offset": [-5, -53],
+                "wire-connectors": {
+                    "1": {
+                        "red-wire": [7.5, -48],
+                        "green-wire": [1, -44.5]
+                    }
+                },
+                "shadow-size": [166.5, 86],
+                "shadow-image-pos": 15647.5,
+                "shadow-offset": [-52, 15]
             }
         ]
     },
     "transport-belt": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-circuit-connector": true,
         "dir-count": 4
     },
     "underground-belt": {
         "collision-boundary-size": 1,
-        "image-size": 192,
+        "image-size": 96,
         "dir-count": 4,
         "dir-versions": [
             {
@@ -3810,7 +3648,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, 0.5],
-                            "cover-pos": [128, 128]
+                            "cover-pos": [64, 64]
                         }
                     ]
                 },
@@ -3818,7 +3656,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, -0.5],
-                            "cover-pos": [0, 128]
+                            "cover-pos": [0, 64]
                         }
                     ]
                 }
@@ -3836,7 +3674,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0.5, 0],
-                            "cover-pos": [128, 0]
+                            "cover-pos": [64, 0]
                         }
                     ]
                 }
@@ -3846,7 +3684,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, -0.5],
-                            "cover-pos": [384, 128]
+                            "cover-pos": [192, 64]
                         }
                     ]
                 },
@@ -3854,7 +3692,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0, 0.5],
-                            "cover-pos": [256, 128]
+                            "cover-pos": [128, 64]
                         }
                     ]
                 }
@@ -3864,7 +3702,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [0.5, 0],
-                            "cover-pos": [384, 0]
+                            "cover-pos": [192, 0]
                         }
                     ]
                 },
@@ -3872,7 +3710,7 @@
                     "belt-outputs": [
                         {
                             "output-coord": [-0.5, 0],
-                            "cover-pos": [256, 0]
+                            "cover-pos": [128, 0]
                         }
                     ]
                 }
@@ -3881,60 +3719,60 @@
     },
     "wooden-chest": {
         "collision-boundary-size": 1,
-        "image-size": 128,
+        "image-size": 64,
         "has-shadow": true,
         "has-circuit-connector": true,
-        "circuit-connector-pos": 896,
-        "circuit-connector-offset": [-25, -19],
+        "circuit-connector-pos": 448,
+        "circuit-connector-offset": [-12.5, -9.5],
         "wire-connectors": {
             "1": {
-                "red-wire": [25, 15],
-                "green-wire": [27, 29]
+                "red-wire": [12.5, 7.5],
+                "green-wire": [13.5, 14.5]
             }
         },
-        "shadow-size": [104, 40],
-        "shadow-image-pos": 32396,
-        "shadow-offset": [-29, -7]
+        "shadow-size": [52, 20],
+        "shadow-image-pos": 16198,
+        "shadow-offset": [-14.5, -3.5]
     },
     "stone-path": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "concrete": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "hazard-concrete-left": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "hazard-concrete-right": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "refined-concrete": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "refined-hazard-concrete-left": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "refined-hazard-concrete-right": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "tile-mask": {
         "collision-boundary-size": 1,
-        "image-size": 96
+        "image-size": 48
     },
     "tile": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "curb": {
         "collision-boundary-size": 1,
-        "image-size": 64
+        "image-size": 32
     },
     "canvas-padding": {
         "top": 3.5,
@@ -3943,86 +3781,86 @@
         "left": 2
     },
     "canvas-min-width": 6,
-    "px-font-size": [14, 20],
-    "px-font-offset": [6, 2],
+    "px-font-size": [7, 10],
+    "px-font-offset": [3, 1],
     "grid-border-width": 2,
-    "base-logo-size": [256, 64],
-    "base-logo-offset": [64, 48],
-    "base-credit-size": [320, 64],
-    "base-credit-offset-top": 32,
-    "combinator-display-size": [30, 22],
-    "circuit-connector-size": [64, 64],
-    "beacon-slot-size": [64, 64],
+    "base-logo-size": [128, 32],
+    "base-logo-offset": [32, 24],
+    "base-credit-size": [160, 32],
+    "base-credit-offset-top": 16,
+    "combinator-display-size": [15, 11],
+    "circuit-connector-size": [32, 32],
+    "beacon-slot-size": [32, 32],
     "belt-circuit-connector-wires": [
         {
-            "red-wire": [27, -45],
-            "green-wire": [43, -34]
+            "red-wire": [13.5, -22.5],
+            "green-wire": [21.5, -17]
         },
         {
-            "red-wire": [23, -42],
-            "green-wire": [39, -32]
+            "red-wire": [11.5, -21],
+            "green-wire": [19.5, -16]
         },
         {
-            "red-wire": [25, -55],
-            "green-wire": [41, -45]
+            "red-wire": [12.5, -27.5],
+            "green-wire": [20.5, -22.5]
         },
         {
-            "red-wire": [23, -36],
-            "green-wire": [36, -24]
+            "red-wire": [11.5, -18],
+            "green-wire": [18, -12]
         },
         {
-            "red-wire": [26, -43],
-            "green-wire": [43, -33]
+            "red-wire": [13, -21.5],
+            "green-wire": [21.5, -16.5]
         }
     ],
     "comparator": {
         "none": [0, 0],
-        "+": [30, 0],
-        "-": [60, 0],
-        "*": [90, 0],
-        "/": [120, 0],
-        "%": [150, 0],
-        "^": [0, 22],
-        "<<": [30, 22],
-        ">>": [60, 22],
-        "AND": [90, 22],
-        "OR": [120, 22],
-        "XOR": [150, 22],
-        ">": [0, 44],
-        "<": [30, 44],
-        "=": [60, 44],
-        "≠": [90, 44],
-        "≤": [120, 44],
-        "≥": [150, 44]
+        "+": [15, 0],
+        "-": [30, 0],
+        "*": [45, 0],
+        "/": [60, 0],
+        "%": [75, 0],
+        "^": [0, 11],
+        "<<": [15, 11],
+        ">>": [30, 11],
+        "AND": [45, 11],
+        "OR": [60, 11],
+        "XOR": [75, 11],
+        ">": [0, 22],
+        "<": [15, 22],
+        "=": [30, 22],
+        "≠": [45, 22],
+        "≤": [60, 22],
+        "≥": [75, 22]
     },
     "beacon-slot": {
         "none": {
             "top-slot": [0, 0],
-            "bottom-slot": [192, 0]
+            "bottom-slot": [96, 0]
         },
         "effectivity-module": {
-            "top-slot": [0, 64],
-            "bottom-slot": [192, 64]
+            "top-slot": [0, 32],
+            "bottom-slot": [96, 32]
         },
         "effectivity-module-2": {
-            "top-slot": [64, 64],
-            "bottom-slot": [256, 64]
+            "top-slot": [32, 32],
+            "bottom-slot": [128, 32]
         },
         "effectivity-module-3": {
-            "top-slot": [128, 64],
-            "bottom-slot": [320, 64]
+            "top-slot": [64, 32],
+            "bottom-slot": [160, 32]
         },
         "speed-module": {
-            "top-slot": [0, 128],
-            "bottom-slot": [192, 128]
+            "top-slot": [0, 64],
+            "bottom-slot": [96, 64]
         },
         "speed-module-2": {
-            "top-slot": [64, 128],
-            "bottom-slot": [256, 128]
+            "top-slot": [32, 64],
+            "bottom-slot": [128, 64]
         },
         "speed-module-3": {
-            "top-slot": [128, 128],
-            "bottom-slot": [320, 128]
+            "top-slot": [64, 64],
+            "bottom-slot": [160, 64]
         }
     }
 }

@@ -2,6 +2,10 @@ import reference from "./reference.json";
 import { state } from "./globals";
 import { getStructuresAt } from "./helpers";
 
+function gropeRails(rail) {
+
+}
+
 export default function setRailCovers() {
     state.rails.forEach((rail) => {
         let { x, y } = rail.position;

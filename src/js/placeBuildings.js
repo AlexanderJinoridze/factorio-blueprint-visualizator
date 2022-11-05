@@ -35,11 +35,11 @@ export default function placeBuildings(ctx) {
         ctx.drawImage(
             loadedImages[buildingName],
             imageSizeX * buildingDirection,
-            0,
+            0 + (reference?.[buildingName]?.["image-pos"]?.[1] || 0),
             imageSizeX,
             imageSizeY,
-            toPX(reference["canvas-padding"]["left"] + coordX) + centerOffsetX,
-            toPX(reference["canvas-padding"]["top"] + coordY) + centerOffsetY,
+            toPX(coordX) + centerOffsetX,
+            toPX(coordY) + centerOffsetY,
             imageSizeX,
             imageSizeY
         );

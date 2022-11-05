@@ -23,7 +23,7 @@ export default async function buildFactory(blueprintString) {
             maxX: Number.NEGATIVE_INFINITY,
             maxY: Number.NEGATIVE_INFINITY,
         },
-        offset: { x: 0, y: 0 },
+        // offset: { x: 0, y: 0 },
         gridSize: { w: 0, h: 0 },
         structures: [],
         rails: [],
@@ -53,18 +53,7 @@ export default async function buildFactory(blueprintString) {
 
         await Promise.all(promises).then(
             () => {
-                let canvas = createCanvas(
-                        toPX(
-                            state.canvasSize.w +
-                                reference["canvas-padding"]["left"] +
-                                reference["canvas-padding"]["right"]
-                        ),
-                        toPX(
-                            state.canvasSize.h +
-                                reference["canvas-padding"]["top"] +
-                                reference["canvas-padding"]["bottom"]
-                        )
-                    ),
+                let canvas = createCanvas(state.canvasSize.w, state.canvasSize.h),
                     ctx = canvas.getContext("2d");
 
                 drawBase(ctx);
@@ -78,7 +67,11 @@ export default async function buildFactory(blueprintString) {
                         img.src = url;
                     });
 
-                loadImage(canvas.toDataURL("image/png", 0.1)).then((img) => document.body.appendChild(img));
+                // console.log('state', state);
+
+                loadImage(canvas.toDataURL("image/png")).then((img) =>
+                    document.querySelector(".blueprint-form").after(img)
+                );
             },
             (reason) => {
                 console.log(reason);

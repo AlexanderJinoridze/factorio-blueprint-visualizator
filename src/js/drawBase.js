@@ -5,7 +5,8 @@ import reference from "./reference.json";
 const writeWithPXFont = (x, y, number) => {};
 
 function drawBoard(context, spX, spY) {
-    let { w: gridSizeX, h: gridSizeY } = state.canvasSize;
+    console.log("state.gridSize", state.gridSize);
+    let { w: gridSizeX, h: gridSizeY } = state.gridSize;
 
     for (var x = 0; x <= gridSizeX; x++) {
         context.moveTo(toPX(x + spX), toPX(spY - 1) + 2);
@@ -28,12 +29,8 @@ function drawBoard(context, spX, spY) {
 export default function drawBase(ctx) {
     try {
         ctx.fillStyle = "#303030";
-        ctx.fillRect(
-            0,
-            0,
-            toPX(state.canvasSize.w + reference["canvas-padding"]["left"] + reference["canvas-padding"]["right"]),
-            toPX(state.canvasSize.h + reference["canvas-padding"]["top"] + reference["canvas-padding"]["bottom"])
-        );
+
+        ctx.fillRect(0, 0, state.canvasSize.w, state.canvasSize.h);
 
         drawBoard(ctx, reference["canvas-padding"]["left"], reference["canvas-padding"]["top"]);
     } catch (e) {
